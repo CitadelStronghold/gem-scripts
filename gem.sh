@@ -1,10 +1,20 @@
 #!/bin/bash
 
+##
+
 DESTINATION_ROOT="$1"
+DESTINATION_FOLDER="$DESTINATION_ROOT/opt/gem"
+
+##
 
 echo '[gem]'
+
+##
 
 cd /opt/gem
 git pull
 
-cp -r /opt/gem $DESTINATION_ROOT/opt/gem
+##
+
+mkdir -p $DESTINATION_FOLDER
+cp -r /opt/gem $DESTINATION_FOLDER
