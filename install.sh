@@ -13,6 +13,8 @@ echo "[gem] [install]"
 
 ##
 
+mkdir -p $DESTINATION_BIN_FOLDER
+
 ln -s -f $SOURCE/bin/gem $DESTINATION_BIN_FOLDER/gem
 
 ##
