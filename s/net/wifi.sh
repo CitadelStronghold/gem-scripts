@@ -7,5 +7,5 @@ if [[ $1 = "-R" ]]; then
     exit 0
 fi
 
-pacman -S wpa_supplicant wireless_tools netctl
-pacman -S dialog
+pacman -S --needed wpa_supplicant wireless_tools netctl
+pacman -S --needed dialog

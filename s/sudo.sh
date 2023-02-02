@@ -6,4 +6,4 @@ if [[ $1 = "-R" ]]; then
     exit 0
 fi
 
-pacman -S sudo
+pacman -S --needed sudo
