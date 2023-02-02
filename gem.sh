@@ -26,6 +26,6 @@ cd $DESTINATION_FOLDER
 
 ##
 
-echo "[gem] [install] [success]"
+echo "[gem] [install] [complete]"
 
 ##
