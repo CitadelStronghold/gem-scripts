@@ -16,5 +16,6 @@ echo "[gem] [install]"
 mkdir -p $DESTINATION_BIN_FOLDER
 
 cp -f $SOURCE/bin/gem $DESTINATION_BIN_FOLDER/gem
+chmod +x $DESTINATION_BIN_FOLDER/gem
 
 ##
