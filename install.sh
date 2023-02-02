@@ -13,6 +13,6 @@ echo "[gem] [install]"
 
 ##
 
-ln -s -f $SOURCE/bin/gem $DESTINATION_BIN_FOLDER/gem
+ln -s -f $DESTINATION_BIN_FOLDER/gem $SOURCE/bin/gem
 
 ##
