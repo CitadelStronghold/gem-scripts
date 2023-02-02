@@ -3,7 +3,7 @@
 ARGS="${@:2}"
 
 if [[ "$1" = "S" ]]; then
-    pacman -S --needed $ARGS
+    pacman -S --needed --noconfirm $ARGS
 
     exit 0
 fi
