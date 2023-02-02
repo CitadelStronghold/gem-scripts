@@ -24,7 +24,7 @@ echo "[gem] [install]"
 mkdir -p $DESTINATION_OPT_FOLDER
 cp -r $SOURCE $DESTINATION_OPT_FOLDER
 
-bash /opt/gem/install.sh $SOURCE $DESTINATION_ROOT
+bash /opt/gem/binaries.sh $SOURCE $DESTINATION_ROOT
 
 ##
 

@@ -9,7 +9,7 @@ DESTINATION_BIN_FOLDER="$DESTINATION_ROOT/usr/bin"
 
 ##
 
-echo "[gem] [install]"
+echo "[gem] [binaries]"
 
 ##
 

@@ -11,6 +11,6 @@ git pull
 
 ##
 
-bash /opt/gem/install.sh /opt/gem /
+bash /opt/gem/binaries.sh /opt/gem /
 
 ##
