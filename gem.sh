@@ -7,7 +7,7 @@ DESTINATION_FOLDER="$DESTINATION_ROOT/opt"
 
 ##
 
-echo '[gem]'
+echo "[gem]"
 
 ##
 
