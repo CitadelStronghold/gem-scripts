@@ -6,6 +6,8 @@ DESTINATION_ROOT="$1"
 DESTINATION_OPT_FOLDER="$DESTINATION_ROOT/opt"
 DESTINATION_BIN_FOLDER="$DESTINATION_ROOT/usr/bin"
 
+SOURCE="${2:-/opt/gem}"
+
 ##
 
 echo "[gem]"
@@ -21,9 +23,9 @@ echo "[gem] [install]"
 ##
 
 mkdir -p $DESTINATION_OPT_FOLDER
-cp -r /opt/gem $DESTINATION_OPT_FOLDER
+cp -r $SOURCE $DESTINATION_OPT_FOLDER
 
-cp /opt/gem/gem-scripts/bin/gem $DESTINATION_BIN_FOLDER
+cp $SOURCE/gem-scripts/bin/gem $DESTINATION_BIN_FOLDER
 
 ##
 
