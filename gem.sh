@@ -20,3 +20,7 @@ mkdir -p $DESTINATION_FOLDER
 cp -r /opt/gem $DESTINATION_FOLDER
 
 ##
+
+cd $DESTINATION_FOLDER
+
+##
