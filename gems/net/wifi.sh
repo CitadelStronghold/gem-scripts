@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $1 = "-R" ]]; then
+if [[ $1 = "r" ]]; then
     gem pac R wpa_supplicant wireless_tools netctl
     gem pac R dialog
     

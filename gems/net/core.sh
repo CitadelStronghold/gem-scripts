@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $1 = "-R" ]]; then
+if [[ $1 = "r" ]]; then
     systemctl disable NetworkManager
     gem pac R networkmanager
     

@@ -18,4 +18,4 @@ if [[ "$1" = "pac" ]]; then
     exit 0
 fi
 
-sudo bash /opt/gem/$MODE/$TARGET.sh
+sudo bash /opt/gem/gems/$TARGET.sh $MODE

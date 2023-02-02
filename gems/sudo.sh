@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $1 = "-R" ]]; then
+if [[ $1 = "r" ]]; then
     gem pac R sudo
     
     exit 0
