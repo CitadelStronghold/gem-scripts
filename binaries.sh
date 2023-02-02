@@ -13,9 +13,9 @@ echo "[gem] [binaries]"
 
 ##
 
-mkdir -p $DESTINATION_BIN_FOLDER || exit 1
+mkdir -p $DESTINATION_BIN_FOLDER
 
-cp -f $SOURCE/bin/gem $DESTINATION_BIN_FOLDER/gem || exit 1
-chmod +x $DESTINATION_BIN_FOLDER/gem || exit 1
+cp -f $SOURCE/bin/gem $DESTINATION_BIN_FOLDER/gem
+chmod +x $DESTINATION_BIN_FOLDER/gem
 
 ##
