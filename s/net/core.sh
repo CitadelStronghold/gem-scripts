@@ -2,10 +2,10 @@
 
 if [[ $1 = "-R" ]]; then
     systemctl disable NetworkManager
-    pacman -R networkmanager
+    gem pac R networkmanager
     
     exit 0
 fi
 
-pacman -S --needed networkmanager
+gem pac S networkmanager
 systemctl enable NetworkManager

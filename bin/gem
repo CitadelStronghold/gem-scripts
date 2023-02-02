@@ -13,4 +13,9 @@ if [[ "$1" = "install" ]]; then
     exit 0
 fi
 
+if [[ "$1" = "pac" ]]; then
+    sudo bash /opt/gem/pac.sh "${@:2}"
+    exit 0
+fi
+
 sudo bash /opt/gem/$MODE/$TARGET.sh

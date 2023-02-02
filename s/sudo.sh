@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "-R" ]]; then
-    pacman -R sudo
+    gem pac R sudo
     
     exit 0
 fi
 
-pacman -S --needed sudo
+gem pac S sudo

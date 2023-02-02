@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "-R" ]]; then
-    pacman -R btop
+    gem pac R btop
     
     exit 0
 fi
 
-pacman -S --needed btop
+gem pac S btop
