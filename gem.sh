@@ -15,11 +15,17 @@ bash /opt/gem/update.sh
 
 ##
 
-mkdir -p $DESTINATION_FOLDER
-cp -r /opt/gem $DESTINATION_FOLDER
+echo "[gem] [install]"
 
 ##
 
+mkdir -p $DESTINATION_FOLDER
+cp -r /opt/gem $DESTINATION_FOLDER
+
 cd $DESTINATION_FOLDER
+
+##
+
+echo "[gem] [install] [success]"
 
 ##
