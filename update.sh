@@ -7,6 +7,8 @@ echo "[gem] [update]"
 ##
 
 cd /opt/gem
+
+git reset --hard
 git pull
 
 ##
