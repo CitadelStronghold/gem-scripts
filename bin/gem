@@ -19,6 +19,7 @@ if [[ "$1" = "pac" ]]; then
 fi
 
 if [[ "$1" = "tree" ]]; then
+    echo "[gem] [tree]"
     tree /opt/gem/gems || exit 1
     exit 0
 fi
