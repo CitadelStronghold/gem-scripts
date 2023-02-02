@@ -13,7 +13,7 @@ echo "[gem]"
 
 ##
 
-bash /opt/gem/update.sh
+bash /opt/gem/update.sh || exit 1
 
 ##
 
@@ -21,10 +21,10 @@ echo "[gem] [install]"
 
 ##
 
-mkdir -p $DESTINATION_OPT_FOLDER
-cp -r $SOURCE $DESTINATION_OPT_FOLDER
+mkdir -p $DESTINATION_OPT_FOLDER || exit 1
+cp -r $SOURCE $DESTINATION_OPT_FOLDER || exit 1
 
-bash /opt/gem/binaries.sh $SOURCE $DESTINATION_ROOT
+bash /opt/gem/binaries.sh $SOURCE $DESTINATION_ROOT || exit 1
 
 ##
 

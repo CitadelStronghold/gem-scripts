@@ -4,18 +4,18 @@ MODE="$1"
 TARGET="$2"
 
 if [[ "$1" = "" ]]; then
-    sudo bash /opt/gem/update.sh
+    sudo bash /opt/gem/update.sh || exit 1
     exit 0
 fi
 
 if [[ "$1" = "install" ]]; then
-    sudo bash /opt/gem/install.sh $TARGET
+    sudo bash /opt/gem/install.sh $TARGET || exit 1
     exit 0
 fi
 
 if [[ "$1" = "pac" ]]; then
-    sudo bash /opt/gem/pac.sh "${@:2}"
+    sudo bash /opt/gem/pac.sh "${@:2}" || exit 1
     exit 0
 fi
 
-sudo bash /opt/gem/gems/$TARGET $MODE
+sudo bash /opt/gem/gems/$TARGET $MODE || exit 1
