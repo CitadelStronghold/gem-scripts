@@ -1,0 +1,6 @@
+#!/bin/bash
+
+MODE="$1"
+TARGET="$2"
+
+bash /opt/gem/$MODE/$TARGET.sh
