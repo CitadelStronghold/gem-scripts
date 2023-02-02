@@ -3,4 +3,8 @@
 MODE="$1"
 TARGET="$2"
 
+if [[ "$1" = "" ]]; then
+    echo empty
+fi
+
 bash /opt/gem/$MODE/$TARGET.sh
