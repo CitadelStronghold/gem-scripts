@@ -4,7 +4,7 @@ MODE="$1"
 TARGET="$2"
 
 if [[ "$1" = "" ]]; then
-    echo empty
+    sudo bash /opt/gem/update.sh
 
     exit 0
 fi
