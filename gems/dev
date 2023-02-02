@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    gem pac R git vim which
+    gem pac R git vim which tree
     
     exit 0
 fi
 
-gem pac S git vim which
+gem pac S git vim which tree
