@@ -19,7 +19,7 @@ if [[ "$1" = "pac" ]]; then
 fi
 
 if [[ "$1" = "tree" ]]; then
-    sudo tree /opt/gem/gems || exit 1
+    tree /opt/gem/gems || exit 1
     exit 0
 fi
 
