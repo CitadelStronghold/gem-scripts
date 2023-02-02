@@ -11,8 +11,7 @@ echo "[gem]"
 
 ##
 
-cd /opt/gem
-git pull
+bash /opt/gem/update.sh
 
 ##
 
