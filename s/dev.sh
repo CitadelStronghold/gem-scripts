@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "-R" ]]; then
-    pacman -R git
+    pacman -R git vim
     
     exit 0
 fi
 
-pacman -S git
+pacman -S git vim
