@@ -4,10 +4,12 @@ DEPS="base-devel gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-ke
 libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols \
 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
+CONFIG_DIR="$HOME/.config"
+
 HYPR_DIR="$HOME/hypr"
 HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
 HYPR_WAYBAR_DIR="$HYPR_DIR/waybar"
-HYPR_CONFIG_DIR="$HOME/.config/hypr"
+HYPR_CONFIG_DIR="$CONFIG_DIR/hypr"
 HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
 HYPR_WALLPAPERS_DIR="/opt/wall"
@@ -15,6 +17,9 @@ HYPR_WALLPAPERS_DIR="/opt/wall"
 FONTS_DIR="$HOME/fonts"
 IOSEVKA_ZIP_NAME="iosevka.zip"
 IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
+
+FOOT_CONFIG_DIR="$CONFIG_DIR/foot"
+FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
@@ -50,9 +55,6 @@ cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
 
 echo "[gem] [hyprland] Targeted config $HYPR_CONFIG"
 
-echo "[gem] [hyprland] [foot]"
-gem pac S foot
-
 echo "[gem] [hyprland] [hyprpaper]"
 git clone https://github.com/hyprwm/hyprpaper.git $HYPR_PAPER_DIR
 cd $HYPR_PAPER_DIR
@@ -84,3 +86,8 @@ cd $FONTS_DIR
 unzip -o $IOSEVKA_ZIP_NAME
 sudo cp -f $FONTS_DIR/iosevka.ttc /usr/share/fonts
 fc-cache --force
+
+echo "[gem] [hyprland] [foot]"
+gem pac S foot
+mkdir -p $FOOT_CONFIG_DIR
+cp /etc/xdg/foot/foot.ini $FOOT_CONFIG
