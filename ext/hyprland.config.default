@@ -15,11 +15,10 @@ monitor=,3000x1200,0x0,1
 exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 windowrule = opacity 0.85 0.85,^(foot)$
-exec-once=hyprpaper
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
 # Execute apps at launch
-exec-once=hyprpaper & waybar
+# exec-once=hyprpaper & waybar
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
