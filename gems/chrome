@@ -10,4 +10,5 @@ if [[ $1 = "r" ]]; then
 fi
 
 yay -S google-chrome
+
 printf '[Desktop Entry]\nName=Chrome Wayland\nExec=/usr/bin/google-chrome-stable --ozone-platform=wayland\nType=Application\n' | sudo tee $CHROME_DESKTOP
