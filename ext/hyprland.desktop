@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Hyprland
+Exec=bash /opt/gem/ext/hypr.sh
+Type=Application

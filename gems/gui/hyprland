@@ -8,6 +8,8 @@ HYPR_DIR="~/hypr"
 HYPR_CONFIG_DIR="~/.config/hypr"
 HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 
+SESSIONS_DIR="/usr/share/wayland-sessions"
+
 remove_hypr_dir() {
     rm -rf $HYPR_DIR
     rm -rf $HYPR_CONFIG_DIR
@@ -28,10 +30,5 @@ cd $HYPR_DIR
 
 sudo make install || exit 1
 
-# Generate the config
-Hyprland &
-
-wait $$
-
-echo "[gem] [hyprland] Removing default configuration line"
-sed -i "/ParallelDownloads/s/^/#/g" $HYPR_CONFIG
+sudo mkdir -p $SESSIONS_DIR
+sudo cp /opt/gem/ext/hyprland.desktop $SESSIONS_DIR
