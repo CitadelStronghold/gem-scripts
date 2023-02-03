@@ -1,9 +1,14 @@
 #!/bin/bash
 
+CODE_DESKTOP="/usr/share/applications/code.desktop"
+
 if [[ $1 = "r" ]]; then
+    sudo rm -f $CODE_DESKTOP
     gem pac R code
     
     exit 0
 fi
 
 gem pac S code
+
+printf '[Desktop Entry]\nName=Code\nExec=/usr/bin/code --ozone-platform=wayland\nType=Application\n' | sudo tee $CODE_DESKTOP
