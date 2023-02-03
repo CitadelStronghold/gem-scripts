@@ -57,9 +57,9 @@ cp /opt/gem/ext/hyprpaper.config.default $HYPR_PAPER_CONFIG
 sudo mkdir -p $HYPR_WALLPAPERS_DIR
 sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
 
-echo "[gem] [hyprland] [waybar]"
-gem pac S otf-font-awesome gtk-mm
-git clone https://github.com/Alexays/Waybar $HYPR_WAYBAR_DIR
-cd $HYPR_WAYBAR_DIR
-meson build
-sudo ninja -C build install
+#echo "[gem] [hyprland] [waybar]"
+#gem pac S otf-font-awesome gtk-mm
+#git clone https://github.com/Alexays/Waybar $HYPR_WAYBAR_DIR
+#cd $HYPR_WAYBAR_DIR
+#meson build
+#sudo ninja -C build install
