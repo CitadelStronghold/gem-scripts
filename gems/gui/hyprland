@@ -17,6 +17,7 @@ remove_hypr_dir() {
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
+    gem pac R foot
     remove_hypr_dir
     
     exit 0
@@ -38,3 +39,7 @@ mkdir -p $HYPR_CONFIG_DIR
 cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
 
 echo "[gem] [hyprland] Targeted config $HYPR_CONFIG"
+
+echo "[gem] [hyprland] [foot]"
+
+gem pac S foot
