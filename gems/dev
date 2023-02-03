@@ -4,11 +4,13 @@ DEPS="git vim which tree ninja cmake make wget unzip base-devel"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
-    
+
     exit 0
 fi
 
 gem pac S $DEPS
+
+git config --global credential.helper store
 
 git clone https://aur.archlinux.org/yay.git ~/downloads/yay
 cd ~/downloads/yay
