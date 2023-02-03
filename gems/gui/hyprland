@@ -4,8 +4,8 @@ DEPS="base-devel gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-ke
 libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols \
 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
-HYPR_DIR="~/hypr"
-HYPR_CONFIG_DIR="~/.config/hypr"
+HYPR_DIR="$HOME/hypr"
+HYPR_CONFIG_DIR="$HOME/.config/hypr"
 HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
@@ -36,4 +36,4 @@ cp /opt/gem/ext/hyprland.desktop $SESSIONS_DIR
 mkdir -p $HYPR_CONFIG_DIR
 cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
 
-echo "$(pwd)"
+echo "[gem] [hyprland] Targeted config $HYPR_CONFIG"
