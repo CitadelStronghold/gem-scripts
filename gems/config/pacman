@@ -3,9 +3,21 @@
 if [[ $1 = "r" ]]; then
     sudo sed -i "/ParallelDownloads/s/^/#/g" /etc/pacman.conf
     echo "[gem] [disable] ParallelDownloads in /etc/pacman.conf"
-    
+
+    sudo systemctl stop paccache.timer
+    sudo systemctl disable paccache.timer
+    sudo systemctl status paccache.timer
+    echo "[gem] [disable] [service] paccache.timer"
+
     exit 0
 fi
 
 sudo sed -i "/ParallelDownloads/s/^#//g" /etc/pacman.conf
 echo "[gem] [enable] ParallelDownloads in /etc/pacman.conf"
+
+sudo systemctl enable paccache.timer
+sudo systemctl start paccache.timer
+sudo systemctl status paccache.timer
+echo "[gem] [enable] [service] paccache.timer"
+
+sudo paccache -r
