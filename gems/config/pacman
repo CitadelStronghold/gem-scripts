@@ -2,9 +2,10 @@
 
 if [[ $1 = "r" ]]; then
     sudo sed -i "/ParallelDownloads/s/^/#/g" /etc/pacman.conf
+    echo "[gem] [disable] ParallelDownloads in /etc/pacman.conf"
     
     exit 0
 fi
 
-echo "[gem] Enabled ParallelDownloads in /etc/pacman.conf"
 sudo sed -i "/ParallelDownloads/s/^#//g" /etc/pacman.conf
+echo "[gem] [enable] ParallelDownloads in /etc/pacman.conf"
