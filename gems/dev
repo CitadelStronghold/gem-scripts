@@ -14,7 +14,7 @@ git config --global credential.helper store
 
 git clone https://aur.archlinux.org/yay.git ~/downloads/yay
 cd ~/downloads/yay
-sudo -u nobody makepkg -si
+makepkg -si
 cd ~/
 rm -rf ~/downloads/yay
 yay
