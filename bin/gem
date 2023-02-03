@@ -24,4 +24,4 @@ if [[ "$1" = "tree" ]]; then
     exit 0
 fi
 
-sudo bash /opt/gem/gems/$TARGET $MODE || exit 1
+bash /opt/gem/gems/$TARGET $MODE || exit 1
