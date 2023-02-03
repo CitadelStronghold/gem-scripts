@@ -1,9 +1,11 @@
 #!/bin/bash
 
+DEPS="git vim which tree ninja cmake make"
+
 if [[ $1 = "r" ]]; then
-    gem pac R git vim which tree
+    gem pac R $DEPS
     
     exit 0
 fi
 
-gem pac S git vim which tree
+gem pac S $DEPS
