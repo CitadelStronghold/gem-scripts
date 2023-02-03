@@ -12,6 +12,8 @@ HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
 HYPR_WALLPAPERS_DIR="/opt/wall"
 
+FONTS_DIR="$HOME/fonts"
+
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
 remove_hypr_dir() {
@@ -70,3 +72,9 @@ gem pac S thunar
 
 echo "[gem] [hyprland] [mako]"
 gem pac S mako
+
+echo "[gem] [hyprland] [fonts] [iosevka]"
+mkdir -p $FONTS_DIR
+wget -O $FONTS_DIR/iosevka.zip https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
+cd $FONTS_DIR
+unzip iosevka.zip

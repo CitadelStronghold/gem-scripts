@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS="git vim which tree ninja cmake make wget base-devel"
+DEPS="git vim which tree ninja cmake make wget unzip base-devel"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
