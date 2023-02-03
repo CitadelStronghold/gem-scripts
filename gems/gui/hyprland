@@ -22,7 +22,8 @@ remove_hypr_dir() {
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
     gem pac R foot
-    gem pac R otf-font-awesome gtk-mm
+    # gem pac R otf-font-awesome gtk-mm
+    gem pac R thunar
     remove_hypr_dir
     
     exit 0
@@ -63,3 +64,6 @@ sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wa
 #cd $HYPR_WAYBAR_DIR
 #meson build
 #sudo ninja -C build install
+
+echo "[gem] [hyprland] [thunar]"
+pacman -S thunar
