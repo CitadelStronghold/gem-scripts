@@ -23,10 +23,13 @@ fi
 gem pac S $DEPS
 
 remove_hypr_dir
-git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR
+git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 cd $HYPR_DIR
 
-sudo make install
+sudo make install || exit 1
+
+# Generate the config
+Hyperland & disown
 
 echo "[gem] [hyprland] Removing default configuration line"
 sudo sed -i "/ParallelDownloads/s/^/#/g" $HYPR_CONFIG
