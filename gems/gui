@@ -97,7 +97,7 @@ mkdir -p $FOOT_CONFIG_DIR
 cp -f /opt/gem/ext/foot.ini $FOOT_CONFIG
 
 echo "[gem] [hyprland] [xdg-desktop-portal-hyprland]"
-git clone https://github.com/hyperwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DIR
+git clone https://github.com/hyprwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DIR
 cd $HYPR_XDG_DIR
 meson build --prefix=/usr
 ninja -C build install
