@@ -6,8 +6,12 @@ cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
+    rm -rf ~/hyper
     
     exit 0
 fi
 
 gem pac S $DEPS
+
+rm -rf ~/hyper
+git clone --recursive https://github.com/hyperwm/Hyprland ~/hypr
