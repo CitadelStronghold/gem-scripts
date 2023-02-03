@@ -81,6 +81,6 @@ if [[ ! -f "$FONTS_DIR/" ]]; then
     wget -O $IOSEVKA_ZIP https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
 fi
 cd $FONTS_DIR
-unzip $IOSEVKA_ZIP_NAME
+unzip -o $IOSEVKA_ZIP_NAME
 sudo cp -f $FONTS_DIR/iosevka.ttc /usr/share/fonts
 fc-cache --force
