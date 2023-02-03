@@ -9,12 +9,15 @@ if [[ $1 = "r" ]]; then
     sudo systemctl status paccache.timer
     echo "[gem] [disable] [service] paccache.timer"
 
+    gem pac R pacman-contrib
+
     exit 0
 fi
 
 sudo sed -i "/ParallelDownloads/s/^#//g" /etc/pacman.conf
 echo "[gem] [enable] ParallelDownloads in /etc/pacman.conf"
 
+gem pac S pacman-contrib
 sudo systemctl enable paccache.timer
 sudo systemctl start paccache.timer
 sudo systemctl status paccache.timer
