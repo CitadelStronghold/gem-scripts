@@ -22,7 +22,7 @@ remove_hypr_dir() {
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
     gem pac R foot
-    gem pac R otf-font-awesome
+    gem pac R otf-font-awesome gtk-mm
     remove_hypr_dir
     
     exit 0
@@ -58,8 +58,8 @@ sudo mkdir -p $HYPR_WALLPAPERS_DIR
 sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
 
 echo "[gem] [hyprland] [waybar]"
+gem pac S otf-font-awesome gtk-mm
 git clone https://github.com/Alexays/Waybar $HYPR_WAYBAR_DIR
 cd $HYPR_WAYBAR_DIR
 meson build
 sudo ninja -C build install
-gem pac S otf-font-awesome
