@@ -67,3 +67,6 @@ sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wa
 
 echo "[gem] [hyprland] [thunar]"
 gem pac S thunar
+
+echo "[gem] [hyprland] [mako]"
+gem pac S mako
