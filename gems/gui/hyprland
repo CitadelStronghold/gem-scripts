@@ -14,4 +14,4 @@ fi
 gem pac S $DEPS
 
 rm -rf ~/hyper
-git clone --recursive https://github.com/hyperwm/Hyprland ~/hypr
+git clone --recursive https://github.com/hyprwm/Hyprland ~/hypr
