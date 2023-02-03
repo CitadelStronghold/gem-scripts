@@ -1,7 +1,6 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    sudo rm -f /usr/bin/code_default
     gem pac R code
     
     exit 0
