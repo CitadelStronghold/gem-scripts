@@ -1,0 +1,13 @@
+#!/bin/bash
+
+CHROME_DESKTOP="/usr/share/applications/chrome.desktop"
+
+if [[ $1 = "r" ]]; then
+    sudo rm -f $CHROME_DESKTOP
+    yay -R google-chrome
+    
+    exit 0
+fi
+
+yay -S google-chrome
+printf '[Desktop Entry]\nName=Chrome\nExec=/usr/bin/google-chrome-stable --ozone-platform=wayland\nType=Application\n' | sudo tee $CHROME_DESKTOP
