@@ -82,5 +82,5 @@ if [[ ! -f "$FONTS_DIR/" ]]; then
 fi
 cd $FONTS_DIR
 unzip $IOSEVKA_ZIP_NAME
-sudo cp $FONTS_DIR/iosevka.ttc /usr/share/fonts
+sudo cp -f $FONTS_DIR/iosevka.ttc /usr/share/fonts
 fc-cache --force
