@@ -4,14 +4,22 @@ DEPS="gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms \
 libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols \
 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
+HYPR_DIR="~/hypr"
+
+remove_hypr_dir() {
+    rm -rf $HYPR_DIR
+}
+
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
-    rm -rf ~/hyper
+    remove_hypr_dir
     
     exit 0
 fi
 
 gem pac S $DEPS
 
-rm -rf ~/hyper
-git clone --recursive https://github.com/hyprwm/Hyprland ~/hypr
+remove_hypr_dir
+git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR
+cd $HYPR_DIR
+
