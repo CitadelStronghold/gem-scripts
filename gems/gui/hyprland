@@ -28,7 +28,7 @@ remove_hypr_dir
 git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 cd $HYPR_DIR
 
-sudo make install || exit 1
+sudo make install
 
 mkdir -p $SESSIONS_DIR
 cp /opt/gem/ext/hyprland.desktop $SESSIONS_DIR
