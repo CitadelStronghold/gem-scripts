@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CODE_DESKTOP_FOLDER="$HOME/.local/share/applications"
-CODE_DESKTOP="$CODE_DESKTOP_FOLDER/code.desktop"
+CONFIG_FOLDER="$HOME/.config"
+CONFIG="$CONFIG_FOLDER/code-flags.conf"
 
 if [[ $1 = "r" ]]; then
     sudo rm -f $CODE_DESKTOP
@@ -12,5 +12,5 @@ fi
 
 yay -S visual-studio-code-bin
 
-mkdir -p $CODE_DESKTOP_FOLDER
-printf '[Desktop Entry]\nName=Code Wayland\nExec=/usr/bin/code --ozone-platform=wayland\nType=Application\n' | sudo tee $CODE_DESKTOP
+mkdir -p $CONFIG_FOLDER
+echo "--ozone-platform-hint=auto" | tee $CONFIG
