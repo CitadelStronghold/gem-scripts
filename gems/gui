@@ -100,5 +100,5 @@ echo "[gem] [hyprland] [xdg-desktop-portal-hyprland]"
 git clone https://github.com/hyprwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DIR
 cd $HYPR_XDG_DIR
 meson build --prefix=/usr
-ninja -C build install
+sudo ninja -C build install
 sudo cp build/hyprland-share-picker /usr/bin
