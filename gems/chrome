@@ -4,7 +4,7 @@ CONFIG_FOLDER="$HOME/.config"
 CONFIG="$CONFIG_FOLDER/chrome-flags.conf"
 
 if [[ $1 = "r" ]]; then
-    sudo rm -f $CHROME_DESKTOP
+    rm -f $CONFIG
     yay -R google-chrome
     
     exit 0
