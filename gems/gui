@@ -25,7 +25,7 @@ FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
 
 ROFI_DIR="$HOME/rofi"
 ROFI_CONFIG_DIR="$HOME/.config/rofi"
-ROFI_CONFIG="$HOME/.config/rofi"
+ROFI_CONFIG="$ROFI_CONFIG_DIR/config.rasi"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
