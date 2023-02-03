@@ -13,4 +13,6 @@ gem pac S $DEPS
 git clone https://aur.archlinux.org/yay.git ~/downloads/yay
 cd ~/downloads/yay
 makepkg -si
+cd ~/
+rm -rf ~/downloads/yay
 yay
