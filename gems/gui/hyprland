@@ -33,4 +33,5 @@ sudo make install || exit 1
 sudo mkdir -p $SESSIONS_DIR
 sudo cp /opt/gem/ext/hyprland.desktop $SESSIONS_DIR
 
+sudo mkdir -p $HYPR_CONFIG_DIR
 sudo cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG_DIR
