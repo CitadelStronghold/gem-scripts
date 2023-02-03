@@ -115,4 +115,4 @@ meson setup build
 sudo ninja -C build install
 
 mkdir -p $ROFI_CONFIG_DIR
-printf '@theme "gruvbox-dark"\n' > $ROFI_CONFIG
+printf '@theme "gruvbox-dark-hard"\n' > $ROFI_CONFIG
