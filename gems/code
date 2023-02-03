@@ -1,6 +1,7 @@
 #!/bin/bash
 
-CODE_DESKTOP="/usr/share/applications/code.desktop"
+CODE_DESKTOP_FOLDER="$HOME/.local/share/applications"
+CODE_DESKTOP="$CODE_DESKTOP_FOLDER/code.desktop"
 
 if [[ $1 = "r" ]]; then
     sudo rm -f $CODE_DESKTOP
@@ -11,4 +12,5 @@ fi
 
 yay -S visual-studio-code-bin
 
+mkdir -p $CODE_DESKTOP_FOLDER
 printf '[Desktop Entry]\nName=Code Wayland\nExec=/usr/bin/code --ozone-platform=wayland\nType=Application\n' | sudo tee $CODE_DESKTOP

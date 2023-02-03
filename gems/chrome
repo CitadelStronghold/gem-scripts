@@ -1,6 +1,7 @@
 #!/bin/bash
 
-CHROME_DESKTOP="/usr/share/applications/chrome.desktop"
+CHROME_DESKTOP_FOLDER="$HOME/.local/share/applications"
+CHROME_DESKTOP="$CHROME_DESKTOP_FOLDER/chrome.desktop"
 
 if [[ $1 = "r" ]]; then
     sudo rm -f $CHROME_DESKTOP
@@ -11,4 +12,5 @@ fi
 
 yay -S google-chrome
 
+mkdir -p $CHROME_DESKTOP_FOLDER
 printf '[Desktop Entry]\nName=Chrome Wayland\nExec=/usr/bin/google-chrome-stable --ozone-platform=wayland\nType=Application\n' | sudo tee $CHROME_DESKTOP
