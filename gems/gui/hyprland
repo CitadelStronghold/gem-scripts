@@ -8,6 +8,8 @@ HYPR_DIR="$HOME/hypr"
 HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
 HYPR_CONFIG_DIR="$HOME/.config/hypr"
 HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
+HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
+HYPR_WALLPAPERS_DIR="/opt/wall"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
@@ -49,3 +51,6 @@ git clone https://github.com/hyprwm/hyprpaper.git $HYPR_PAPER_DIR
 cd $HYPR_PAPER_DIR
 make all
 sudo cp ./build/hyprpaper /usr/local/bin
+cp /opt/gem/ext/hyprpaper.config.default $HYPR_PAPER_CONFIG
+sudo mkdir -p $HYPR_WALLPAPERS_DIR
+sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
