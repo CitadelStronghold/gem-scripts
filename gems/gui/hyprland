@@ -27,7 +27,6 @@ gem pac S $DEPS
 if [[ ! -d "$HYPR_DIR" ]]; then
     git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 fi
-cd $HYPR_DIR
 
 sudo make install
 
