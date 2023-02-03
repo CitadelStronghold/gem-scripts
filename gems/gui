@@ -101,4 +101,4 @@ git clone https://github.com/hyprwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DI
 cd $HYPR_XDG_DIR
 meson build --prefix=/usr
 sudo ninja -C build install
-sudo cp build/xdg-desktop-portal-hyprland /usr/bin
+# sudo cp build/xdg-desktop-portal-hyprland /usr/bin
