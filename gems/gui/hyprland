@@ -6,6 +6,7 @@ cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
 HYPR_DIR="$HOME/hypr"
 HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
+HYPR_WAYBAR_DIR="$HYPR_DIR/waybar"
 HYPR_CONFIG_DIR="$HOME/.config/hypr"
 HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
@@ -21,6 +22,7 @@ remove_hypr_dir() {
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
     gem pac R foot
+    gem pac R otf-font-awesome
     remove_hypr_dir
     
     exit 0
@@ -54,3 +56,10 @@ sudo cp ./build/hyprpaper /usr/local/bin
 cp /opt/gem/ext/hyprpaper.config.default $HYPR_PAPER_CONFIG
 sudo mkdir -p $HYPR_WALLPAPERS_DIR
 sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
+
+echo "[gem] [hyprland] [waybar]"
+git clone https://github.com/Alexays/Waybar $HYPR_WAYBAR_DIR
+cd $HYPR_WAYBAR_DIR
+meson build
+sudo ninja -C build install
+gem pac S otf-font-awesome
