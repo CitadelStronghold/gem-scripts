@@ -5,6 +5,7 @@ libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols \
 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
 HYPR_DIR="$HOME/hypr"
+HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
 HYPR_CONFIG_DIR="$HOME/.config/hypr"
 HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 
@@ -41,5 +42,10 @@ cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
 echo "[gem] [hyprland] Targeted config $HYPR_CONFIG"
 
 echo "[gem] [hyprland] [foot]"
-
 gem pac S foot
+
+echo "[gem] [hyprland] [hyprpaper]"
+git clone https://github.com/hyprwm/hyprpaper.git $HYPR_PAPER_DIR
+cd $HYPR_PAPER_DIR 
+make all
+cp build/hyprpaper usr/local/bin
