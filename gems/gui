@@ -90,4 +90,4 @@ fc-cache --force
 echo "[gem] [hyprland] [foot]"
 gem pac S foot
 mkdir -p $FOOT_CONFIG_DIR
-cp /etc/xdg/foot/foot.ini $FOOT_CONFIG
+cp -f /opt/gem/ext/foot.ini $FOOT_CONFIG
