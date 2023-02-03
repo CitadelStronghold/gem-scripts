@@ -35,6 +35,7 @@ if [[ $1 = "r" ]]; then
     gem pac R foot
     # gem pac R otf-font-awesome gtk-mm
     gem pac R thunar
+    gem pac R rofi
     remove_hypr_dir
     
     exit 0
@@ -102,3 +103,6 @@ cd $HYPR_XDG_DIR
 meson build --prefix=/usr
 sudo ninja -C build install
 # sudo cp build/xdg-desktop-portal-hyprland /usr/bin
+
+echo "[gem] [hyprland] [rofi]"
+gem pac S rofi
