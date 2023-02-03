@@ -14,6 +14,8 @@ HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
 HYPR_WALLPAPERS_DIR="/opt/wall"
 
+HYPR_XDG_DIR="$HYPR_DIR/xdg"
+
 FONTS_DIR="$HOME/fonts"
 IOSEVKA_ZIP_NAME="iosevka.zip"
 IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
@@ -93,3 +95,10 @@ echo "[gem] [hyprland] [foot]"
 gem pac S foot
 mkdir -p $FOOT_CONFIG_DIR
 cp -f /opt/gem/ext/foot.ini $FOOT_CONFIG
+
+echo "[gem] [hyprland] [xdg-desktop-portal-hyprland]"
+git clone https://github.com/hyperwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DIR
+cd $HYPR_XDG_DIR
+meson build --prefix=/usr
+ninja -C build install
+sudo cp build/hyprland-share-picker /usr/bin
