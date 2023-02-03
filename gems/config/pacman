@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    sudo sed -i '/ParallelDownloads/s/^/#/g' /etc/pacman.conf
+    sudo sed -i "/ParallelDownloads/s/^/#/g" /etc/pacman.conf
     
     exit 0
 fi
 
-# Enable Parallelism
-sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+echo "[gem] Enabled ParallelDownloads in /etc/pacman.conf"
+sudo sed -i "/ParallelDownloads/s/^#//g" /etc/pacman.conf
