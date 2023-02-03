@@ -8,9 +8,6 @@ if [[ $1 = "r" ]]; then
     exit 0
 fi
 
-cd ~/downloads
-wget -O vscode.tar.xf https://code.visualstudio.com/sha/download?build=stable&os=linux-x64
-tar -xf vscode.tar.xf
-rm vscode.tar.xf
+
 
 printf '[Desktop Entry]\nName=Code\nExec=/usr/bin/code --ozone-platform=wayland\nType=Application\n' | sudo tee $CODE_DESKTOP
