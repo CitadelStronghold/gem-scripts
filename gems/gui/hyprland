@@ -5,9 +5,12 @@ libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols \
 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
 HYPR_DIR="~/hypr"
+HYPR_CONFIG_DIR="~/.config/hypr"
+HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 
 remove_hypr_dir() {
     rm -rf $HYPR_DIR
+    rm -rf $HYPR_CONFIG_DIR
 }
 
 if [[ $1 = "r" ]]; then
@@ -24,3 +27,6 @@ git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR
 cd $HYPR_DIR
 
 sudo make install
+
+echo "[gem] [hyprland] Removing default configuration line"
+sudo sed -i "/ParallelDownloads/s/^/#/g" $HYPR_CONFIG
