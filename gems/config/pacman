@@ -18,7 +18,7 @@ echo "[gem] [enable] ParallelDownloads in /etc/pacman.conf"
 sudo sed -i "/ParallelDownloads/s/^#//g" /etc/pacman.conf
 
 echo "[gem] [enable] ParallelDownloads to $(nproc)"
-sudo sed "s/.*ParallelDownloads.*/ParallelDownloads = $(nproc)/" /etc/pacman.conf
+sudo sed -i "/ParallelDownloads/c\ParallelDownloads = $(nproc)/" /etc/pacman.conf
 
 gem pac S pacman-contrib
 sudo systemctl enable paccache.timer
