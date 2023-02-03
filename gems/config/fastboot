@@ -6,3 +6,5 @@ fi
 
 echo "[gem] [enable] Grub timeout to 1"
 sudo sed -i "/GRUB_TIMEOUT/c\GRUB_TIMEOUT=1" /etc/default/grub
+
+sudo update-grub
