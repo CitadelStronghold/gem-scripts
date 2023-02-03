@@ -29,9 +29,7 @@ cd $HYPR_DIR
 sudo make install || exit 1
 
 # Generate the config
-Hyprland & disown
-
-sleep 1
+wait Hyprland &
 
 echo "[gem] [hyprland] Removing default configuration line"
-sudo sed -i "/ParallelDownloads/s/^/#/g" $HYPR_CONFIG
+sed -i "/ParallelDownloads/s/^/#/g" $HYPR_CONFIG
