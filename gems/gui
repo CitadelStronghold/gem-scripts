@@ -45,6 +45,8 @@ if [[ ! -d "$HYPR_DIR" ]]; then
 fi
 
 cd $HYPR_DIR
+git reset --hard
+git pull
 sudo make install
 
 sudo mkdir -p $SESSIONS_DIR
