@@ -34,4 +34,4 @@ mkdir -p $SESSIONS_DIR
 cp /opt/gem/ext/hyprland.desktop $SESSIONS_DIR
 
 mkdir -p $HYPR_CONFIG_DIR
-cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG_DIR
+cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
