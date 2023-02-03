@@ -3,9 +3,11 @@
 if [[ $1 = "r" ]]; then
     systemctl disable gdm
     gem pac R gdm
+    systemctl status gdm
     
     exit 0
 fi
 
 gem pac S gdm
 systemctl enable gdm
+systemctl status gdm
