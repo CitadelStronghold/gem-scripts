@@ -23,6 +23,8 @@ IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
 FOOT_CONFIG_DIR="$CONFIG_DIR/foot"
 FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
 
+ROFI_DIR="$HOME/rofi"
+
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
 remove_hypr_dir() {
@@ -105,4 +107,10 @@ sudo ninja -C build install
 # sudo cp build/xdg-desktop-portal-hyprland /usr/bin
 
 echo "[gem] [hyprland] [rofi]"
-gem pac S rofi
+git clone https://github.com/lbonn/rofi $ROFI_DIR
+cd $ROFI_DIR
+mkdir build
+cd build
+../configure
+make
+sudo make install
