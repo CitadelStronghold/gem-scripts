@@ -24,6 +24,8 @@ FOOT_CONFIG_DIR="$CONFIG_DIR/foot"
 FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
 
 ROFI_DIR="$HOME/rofi"
+ROFI_CONFIG_DIR="$HOME/.config/rofi"
+ROFI_CONFIG="$HOME/.config/rofi"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
@@ -111,3 +113,6 @@ git clone https://github.com/lbonn/rofi $ROFI_DIR
 cd $ROFI_DIR
 meson setup build
 sudo ninja -C build install
+
+mkdir -p $ROFI_CONFIG_DIR
+printf '@theme "gruvbox-dark"\n' > $ROFI_CONFIG
