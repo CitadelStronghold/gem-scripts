@@ -11,5 +11,5 @@ gem pac S code
 
 sudo mv /usr/bin/code /usr/bin/code_default
 
-printf '#!/bin/bash\n\ncode_default --ozone-platform=wayland' | sudo tee /usr/bin/code
+printf '#!/bin/bash\n\nbash code_default --ozone-platform=wayland' | sudo tee /usr/bin/code
 sudo chmod +x /usr/bin/code
