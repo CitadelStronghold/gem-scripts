@@ -13,7 +13,8 @@ HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
 HYPR_WALLPAPERS_DIR="/opt/wall"
 
 FONTS_DIR="$HOME/fonts"
-IOSEVKA_ZIP="$FONTS_DIR/iosevka.zip"
+IOSEVKA_ZIP_NAME="iosevka.zip"
+IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
@@ -79,6 +80,6 @@ mkdir -p $FONTS_DIR
 if [[ ! -f "$FONTS_DIR/" ]]
 wget -O $IOSEVKA_ZIP https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
 cd $FONTS_DIR
-unzip $IOSEVKA_ZIP
+unzip $IOSEVKA_ZIP_NAME
 sudo cp $FONTS_DIR/iosevka.ttc /usr/share/fonts
 fc-cache --force
