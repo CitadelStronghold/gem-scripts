@@ -24,4 +24,13 @@ if [[ "$1" = "tree" ]]; then
     exit 0
 fi
 
+if [[ "$1" = "shutdown" ]]; then
+    sudo shutdown -h --no-wall now
+    exit 0
+fi
+if [[ "$1" = "reboot" ]]; then
+    sudo reboot -h --no-wall
+    exit 0
+fi
+
 bash /opt/gem/gems/$TARGET $MODE || exit 1
