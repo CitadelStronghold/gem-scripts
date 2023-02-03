@@ -9,7 +9,7 @@ if [[ "$1" = "S" ]]; then
 fi
 
 if [[ "$1" = "R" ]]; then
-    pacman -R $ARGS
+    pacman -Rcns $ARGS
 
     exit 0
 fi
