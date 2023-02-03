@@ -66,4 +66,4 @@ sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wa
 #sudo ninja -C build install
 
 echo "[gem] [hyprland] [thunar]"
-pacman -S thunar
+gem pac S thunar
