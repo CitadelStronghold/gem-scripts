@@ -9,7 +9,7 @@ if [[ $1 = "r" ]]; then
 fi
 
 cd ~/downloads
-wget -O vscode.tar.xf
+wget -O vscode.tar.xf https://code.visualstudio.com/sha/download?build=stable&os=linux-x64
 tar -xf vscode.tar.xf
 rm vscode.tar.xf
 
