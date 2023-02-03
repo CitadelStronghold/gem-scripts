@@ -48,4 +48,4 @@ echo "[gem] [hyprland] [hyprpaper]"
 git clone https://github.com/hyprwm/hyprpaper.git $HYPR_PAPER_DIR
 cd $HYPR_PAPER_DIR 
 make all
-cp build/hyprpaper usr/local/bin
+cp ./build/hyprpaper /usr/local/bin
