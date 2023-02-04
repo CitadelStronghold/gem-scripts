@@ -1,0 +1,14 @@
+#!/bin/bash
+
+BITWARDEN_FOLDER="$HOME/.bitwarden"
+
+if [[ $1 = "r" ]]; then
+    rm -rf $BITWARDEN_FOLDER
+
+    exit 0
+fi
+
+cd ~/downloads
+wget -O BitWarden.AppImage https://vault.bitwarden.com/download/?app=desktop&platform=linux
+mkdir -p $BITWARDEN_FOLDER
+mv BitWarden.AppImage $BITWARDEN_FOLDER
