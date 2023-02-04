@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    gem pac R grim slurp
+    gem pac R grim slurp swappy
 
     exit 0
 fi
 
-gem pac S grim slurp
+gem pac S grim slurp swappy
