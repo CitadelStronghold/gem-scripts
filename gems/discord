@@ -19,7 +19,6 @@ mkdir -p $DISCORD_FOLDER
 tar -xf $DISCORD_TAR_NAME
 
 cp -r ./Discord/* $DISCORD_FOLDER
-rm -rf $DISCORD_FOLDER
 
 rm -rf $DISCORD_TAR_NAME
 rm -rf Discord
