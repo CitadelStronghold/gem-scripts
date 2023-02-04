@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    gem pac R alsa-utils
+
+    exit 0
+fi
+
+gem pac S alsa-utils
