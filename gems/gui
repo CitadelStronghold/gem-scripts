@@ -10,7 +10,7 @@ HYPR_WAYBAR_DIR="$HYPR_DIR/waybar"
 
 HYPR_XDG_DIR="$HYPR_DIR/xdg"
 
-ROFI_DIR="$HOME/rofi"
+ROFI_DIR="$HYPR_DIR/rofi"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
