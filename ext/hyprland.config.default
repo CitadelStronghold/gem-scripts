@@ -50,7 +50,7 @@ general {
 decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-    rounding = 4
+    rounding = 32
     multisample_edges = true
     blur = yes
     blur_size = 6
