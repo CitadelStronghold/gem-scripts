@@ -116,6 +116,7 @@ bind = $mainMod, T, exec, foot
 bind = $mainMod, E, exec, foot nnn
 bind = $mainMod, D, exec, code
 bind = $mainMod, B, exec, google-chrome-stable
+bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, V, togglefloating
 bind = $mainMod, R, exec, rofi -show drun
 bind = $mainMod, P, pseudo, # dwindle
