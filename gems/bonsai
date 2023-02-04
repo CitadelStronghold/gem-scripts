@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    yay -R cbonsai
+
+    exit 0
+fi
+
+yay -S cbonsai
