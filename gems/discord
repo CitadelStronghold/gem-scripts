@@ -4,6 +4,7 @@ CONFIG_FOLDER="$HOME/.config"
 CONFIG="$CONFIG_FOLDER/discord-flags.conf"
 
 if [[ $1 = "r" ]]; then
+    rm -f $CONFIG
     yay -R discord_arch_electron
 
     exit 0
