@@ -7,3 +7,4 @@ if [[ $1 = "r" ]]; then
 fi
 
 yay -S vmware-workstation
+sudo modprobe -a vmw_vmci vmmon
