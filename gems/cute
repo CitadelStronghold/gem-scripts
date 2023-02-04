@@ -2,10 +2,10 @@
 
 if [[ $1 = "r" ]]; then
     yay -R cbonsai
-    gem pac R neovim
+    gem pac R neofetch
 
     exit 0
 fi
 
 yay -S cbonsai
-gem pac S neovim
+gem pac S neofetch
