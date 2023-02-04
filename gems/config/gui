@@ -6,6 +6,7 @@ HYPR_CONFIG_DIR="$CONFIG_DIR/hypr"
 HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
 HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
 HYPR_WALLPAPERS_DIR="/opt/wall"
+HYPR_DEFUALT_WALLPAPER="$HYPR_WALLPAPERS_DIR/default.jpg"
 
 FONTS_INSTALL_DIR="/usr/share/fonts"
 FONTS_DIR="$HOME/fonts"
@@ -34,7 +35,9 @@ cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
 echo "[gem] [config] [hyprpaper]"
 cp /opt/gem/ext/hyprpaper.config.default $HYPR_PAPER_CONFIG
 sudo mkdir -p $HYPR_WALLPAPERS_DIR
-sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
+if [[ ! -f "$HYPR_DEFUALT_WALLPAPER" ]]; then
+    sudo wget -O $HYPR_DEFUALT_WALLPAPER https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
+fi
 
 echo "[gem] [hyprland] [fonts] [iosevka]"
 if [[ ! -f "$FONTS_INSTALL_DIR/$IOSEVKA_TTC" ]]; then
