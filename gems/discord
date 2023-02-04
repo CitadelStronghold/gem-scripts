@@ -1,0 +1,20 @@
+#!/bin/bash
+
+DISCORD_FOLDER="$HOME/.discord"
+DISCORD_APPIMAGE_NAME="Discord.AppImage"
+
+if [[ $1 = "r" ]]; then
+    rm -rf $DISCORD_FOLDER
+
+    exit 0
+fi
+
+cd ~/downloads
+curl -L 'https://discord.com/api/download?platform=linux&format=tar.gz' --output $DISCORD_APPIMAGE_NAME
+
+chmod +x $DISCORD_APPIMAGE_NAME
+
+mkdir -p $DISCORD_FOLDER
+mv -f $DISCORD_APPIMAGE_NAME $DISCORD_FOLDER
+
+echo "[gem] [discord] Installed to $DISCORD_FOLDER"
