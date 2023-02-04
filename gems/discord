@@ -1,26 +1,17 @@
 #!/bin/bash
 
-DISCORD_FOLDER="$HOME/.discord"
-DISCORD_TAR_NAME="Discord.tar.gz"
-DISCORD_APPIMAGE_NAME="Discord.AppImage"
+CONFIG_FOLDER="$HOME/.config"
+CONFIG="$CONFIG_FOLDER/discord-flags.conf"
 
 if [[ $1 = "r" ]]; then
-    rm -rf $DISCORD_FOLDER
+    yay -R discord_arch_electron
 
     exit 0
 fi
 
-cd ~/downloads
-curl -L 'https://discord.com/api/download?platform=linux&format=tar.gz' --output $DISCORD_TAR_NAME
+yay -S discord_arch_electron
 
-rm -rf $DISCORD_FOLDER
-mkdir -p $DISCORD_FOLDER
+mkdir -p $CONFIG_FOLDER
+echo "--ozone-platform=wayland" | tee $CONFIG
 
-tar -xf $DISCORD_TAR_NAME
-
-cp -r ./Discord/* $DISCORD_FOLDER
-
-rm -rf $DISCORD_TAR_NAME
-rm -rf Discord
-
-echo "[gem] [discord] Installed to $DISCORD_FOLDER"
+echo "[gem] [discord]"
