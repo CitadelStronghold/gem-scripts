@@ -1,6 +1,7 @@
 #!/bin/bash
 
 BITWARDEN_FOLDER="$HOME/.bitwarden"
+BITWARDEN_APPIMAGE_NAME="BitWarden.AppImage"
 
 if [[ $1 = "r" ]]; then
     rm -rf $BITWARDEN_FOLDER
@@ -9,8 +10,11 @@ if [[ $1 = "r" ]]; then
 fi
 
 cd ~/downloads
-curl -L 'https://vault.bitwarden.com/download/?app=desktop&platform=linux' --output BitWarden.AppImage
+curl -L 'https://vault.bitwarden.com/download/?app=desktop&platform=linux' --output $BITWARDEN_APPIMAGE_NAME
+
+chmod +x $BITWARDEN_APPIMAGE_NAME
+
 mkdir -p $BITWARDEN_FOLDER
-mv -f BitWarden.AppImage $BITWARDEN_FOLDER
+mv -f $BITWARDEN_APPIMAGE_NAME $BITWARDEN_FOLDER
 
 echo "[gem] [bitwarden] Installed to $BITWARDEN_FOLDER"
