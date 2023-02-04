@@ -1,9 +1,15 @@
 #!/bin/bash
 
+BTOP_DIR="$HOME/.config/btop"
+BTOP_CONF_NAME="btop.conf"
+
 if [[ $1 = "r" ]]; then
     gem pac R btop
-    
+
     exit 0
 fi
 
 gem pac S btop
+
+mkdir -p $BTOP_DIR
+cp -f /opt/gem/ext/$BTOP_CONF_NAME $BTOP_DIR/$BTOP_CONF_NAME
