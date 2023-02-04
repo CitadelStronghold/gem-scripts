@@ -117,12 +117,12 @@ bind = $mainMod, E, exec, foot nnn
 bind = $mainMod, D, exec, code
 bind = $mainMod, B, exec, google-chrome-stable
 bind = $mainMod, Y, exec, hyprpicker
-bind = $mainMod, n, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
-bind = $mainMod, w, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
+bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
+bind = $mainMod, W, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
 bind = $mainMod, V, togglefloating
 bind = $mainMod, R, exec, rofi -show drun
 bind = $mainMod, P, pseudo, # dwindle
-bind = $mainMod, J, togglesplit, # dwindle
+bind = $mainMod, N, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
