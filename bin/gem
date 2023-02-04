@@ -38,11 +38,11 @@ fi
 if [[ "$1" = "c" ]]; then
     if [[ "$1" = "hypr" ]]; then
         $EDITOR ~/.config/hypr/hyprland.conf
-    else if [[ "$1" = "paper" ]]; then
+    elif [[ "$1" = "paper" ]]; then
         $EDITOR ~/.config/hypr/hyprpaper.conf
-    else if [[ "$1" = "foot" ]]; then
+    elif [[ "$1" = "foot" ]]; then
         $EDITOR ~/.config/foot/foot.ini
-    else if [[ "$1" = "rofi" ]]; then
+    elif [[ "$1" = "rofi" ]]; then
         $EDITOR ~/.config/rofi/config.rasi
     fi
 
