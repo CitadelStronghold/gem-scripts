@@ -36,13 +36,13 @@ if [[ "$1" = "reboot" ]]; then
 fi
 
 if [[ "$1" = "c" ]]; then
-    if [[ "$1" = "hypr" ]]; then
+    if [[ "$2" = "hypr" ]]; then
         $EDITOR ~/.config/hypr/hyprland.conf
-    elif [[ "$1" = "paper" ]]; then
+    elif [[ "$2" = "paper" ]]; then
         $EDITOR ~/.config/hypr/hyprpaper.conf
-    elif [[ "$1" = "foot" ]]; then
+    elif [[ "$2" = "foot" ]]; then
         $EDITOR ~/.config/foot/foot.ini
-    elif [[ "$1" = "rofi" ]]; then
+    elif [[ "$2" = "rofi" ]]; then
         $EDITOR ~/.config/rofi/config.rasi
     fi
 
