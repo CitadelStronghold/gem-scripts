@@ -3,6 +3,8 @@
 MODE="$1"
 TARGET="$2"
 
+EDITOR="${EDITOR:-vim}"
+
 if [[ "$1" = "" ]]; then
     sudo bash /opt/gem/update.sh || exit 1
     exit 0
@@ -30,6 +32,20 @@ if [[ "$1" = "shutdown" ]]; then
 fi
 if [[ "$1" = "reboot" ]]; then
     sudo reboot -h --no-wall
+    exit 0
+fi
+
+if [[ "$1" = "c" ]]; then
+    if [[ "$1" = "hypr" ]]; then
+        $EDITOR ~/.config/hypr/hyprland.conf
+    else if [[ "$1" = "paper" ]]; then
+        $EDITOR ~/.config/hypr/hyprpaper.conf
+    else if [[ "$1" = "foot" ]]; then
+        $EDITOR ~/.config/foot/foot.ini
+    else if [[ "$1" = "rofi" ]]; then
+        $EDITOR ~/.config/rofi/config.rasi
+    fi
+
     exit 0
 fi
 
