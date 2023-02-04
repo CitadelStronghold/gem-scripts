@@ -2,6 +2,8 @@
 
 DEPS="git vim which tree ninja cmake make wget unzip fuse2 base-devel"
 
+YAY_FOLDER="$HOME/downloads/yay"
+
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
 
@@ -12,9 +14,9 @@ gem pac S $DEPS
 
 git config --global credential.helper store
 
-git clone https://aur.archlinux.org/yay.git ~/downloads/yay
-cd ~/downloads/yay
+git clone https://aur.archlinux.org/yay.git $YAY_FOLDER
+cd $YAY_FOLDER
 makepkg -si
-cd ~/
-rm -rf ~/downloads/yay
+cd $HOME
+rm -rf $YAY_FOLDER
 yay
