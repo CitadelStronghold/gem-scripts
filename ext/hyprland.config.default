@@ -17,6 +17,7 @@ exec-once=hyprpaper
 
 exec-once=foot -H cbonsai -l
 exec-once=foot -H neofetch
+exec-once=foot -H btop
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
