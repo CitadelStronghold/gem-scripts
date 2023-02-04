@@ -15,8 +15,8 @@ windowrule = opacity 0.8 0.8,^(foot)$
 exec-once=hyprpaper
 # exec-once=waybar
 
-exec-once=foot "sleep 0.25 && cbonsai"
-exec-once=foot neofetch
+exec-once=foot -H "sleep 0.25 && cbonsai"
+exec-once=foot -H neofetch
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
