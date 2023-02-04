@@ -13,11 +13,9 @@ fi
 cd ~/downloads
 curl -L 'https://discord.com/api/download?platform=linux&format=tar.gz' --output $DISCORD_TAR_NAME
 
-tar -xf $DISCORD_TAR_NAME
-
-chmod +x $DISCORD_APPIMAGE_NAME
-
+rm -rf $DISCORD_FOLDER
 mkdir -p $DISCORD_FOLDER
-mv -f $DISCORD_APPIMAGE_NAME $DISCORD_FOLDER
+
+tar -xf $DISCORD_TAR_NAME -C $DISCORD_FOLDER
 
 echo "[gem] [discord] Installed to $DISCORD_FOLDER"
