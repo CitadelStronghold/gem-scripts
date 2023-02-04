@@ -14,6 +14,7 @@ windowrule = opacity 0.8 0.8,^(foot)$
 # Execute apps at launch
 exec-once=hyprpaper
 # exec-once=waybar
+exec-once=foot cbonsai -l & foot neofetch
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
