@@ -125,6 +125,10 @@ bind = $mainMod, R, exec, rofi -show drun
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, N, togglesplit, # dwindle
 
+bind = $mainMod, S, exec, XDG_CURRENT_DESKTOP=sway flameshot gui --raw
+windowrulev2 = noanim, class:^(flameshot)$
+windowrulev2 = float, class:^(flameshot)$
+
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
 bind = $mainMod, right, movefocus, r
