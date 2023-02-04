@@ -31,7 +31,7 @@ fi
 
 gem pac S $DEPS
 
-rm -rf $HYPR_DIR
+sudo rm -rf $HYPR_DIR
 git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 cd $HYPR_DIR
 sudo make install
