@@ -15,7 +15,7 @@ windowrule = opacity 0.8 0.8,^(foot)$
 exec-once=hyprpaper
 # exec-once=waybar
 
-exec-once=foot -H cbonsai -l
+exec-once=foot -H cbonsai
 exec-once=foot -H neofetch
 
 # Source a file (multi-file configs)
