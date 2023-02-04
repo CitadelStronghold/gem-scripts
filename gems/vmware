@@ -1,11 +1,9 @@
 #!/bin/bash
 
-BUNDLE_FILE="$HOME/downloads/VMWare.bundle"
-
 if [[ $1 = "r" ]]; then
-
+    yay -R vmware-workstation
 
     exit 0
 fi
 
-echo "[gem] Manual installation is required. Download and run the file from here: https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html"
+yay -S vmware-workstation
