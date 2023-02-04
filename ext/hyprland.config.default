@@ -119,8 +119,8 @@ bind = $mainMod, B, exec, google-chrome-stable
 bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
-bind = $mainMod, W, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
-bind = $mainMod, V, togglefloating
+bind = $mainMod, V, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
+bind = $mainMod, F, togglefloating
 bind = $mainMod, R, exec, rofi -show drun
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, N, togglesplit, # dwindle
