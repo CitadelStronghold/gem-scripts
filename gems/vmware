@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BUNDLE_FILE="$HOME/downloads/VMWare.bundle"
+
+if [[ $1 = "r" ]]; then
+
+
+    exit 0
+fi
+
+curl -L https://www.vmware.com/go/getworkstation-linux --output $BUNDLE_FILE
+
+# rm -rf $BUNDLE_FILE
