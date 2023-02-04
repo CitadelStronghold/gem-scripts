@@ -6,6 +6,7 @@ YAY_FOLDER="$HOME/downloads/yay"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
+    gem pac R yay
 
     exit 0
 fi
