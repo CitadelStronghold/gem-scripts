@@ -130,6 +130,8 @@ bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
 # windowrulev2 = noanim, class:^(flameshot)$
 # windowrulev2 = float, class:^(flameshot)$
 
+bind = $mainMod, L, exec, swaylock
+
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
 bind = $mainMod, right, movefocus, r
