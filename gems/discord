@@ -1,6 +1,7 @@
 #!/bin/bash
 
 DISCORD_FOLDER="$HOME/.discord"
+DISCORD_TAR_NAME="Discord.tar.gz"
 DISCORD_APPIMAGE_NAME="Discord.AppImage"
 
 if [[ $1 = "r" ]]; then
@@ -10,7 +11,9 @@ if [[ $1 = "r" ]]; then
 fi
 
 cd ~/downloads
-curl -L 'https://discord.com/api/download?platform=linux&format=tar.gz' --output $DISCORD_APPIMAGE_NAME
+curl -L 'https://discord.com/api/download?platform=linux&format=tar.gz' --output $DISCORD_TAR_NAME
+
+tar -xf $DISCORD_TAR_NAME
 
 chmod +x $DISCORD_APPIMAGE_NAME
 
