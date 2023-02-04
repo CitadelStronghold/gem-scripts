@@ -22,7 +22,7 @@ if [[ $1 = "r" ]]; then
     gem pac R $DEPS
     gem pac R foot
     # gem pac R otf-font-awesome gtk-mm
-    gem pac R dolphin
+    gem pac R nnn
     gem pac R rofi
     remove_hypr_dir
 
@@ -52,8 +52,8 @@ sudo cp ./build/hyprpaper /usr/local/bin
 #meson build
 #sudo ninja -C build install
 
-echo "[gem] [hyprland] [dolphin]"
-gem pac S dolphin
+echo "[gem] [hyprland] [nnn]"
+gem pac S nnn
 
 echo "[gem] [hyprland] [mako]"
 gem pac S mako
