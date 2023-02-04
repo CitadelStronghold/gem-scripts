@@ -58,3 +58,7 @@ cp -f /opt/gem/ext/foot.ini $FOOT_CONFIG
 echo "[gem] [config] [rofi]"
 mkdir -p $ROFI_CONFIG_DIR
 printf '@theme "gruvbox-dark-hard"\n' > $ROFI_CONFIG
+
+echo "[gem] [config] [electron-flags]"
+echo '--ozone-platform-hint=auto' | tee $HOME/.config/electron-flags.conf
+echo '--ozone-platform=wayland' | tee $HOME/.config/electron17-flags.conf
