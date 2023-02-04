@@ -9,6 +9,6 @@ if [[ $1 = "r" ]]; then
 fi
 
 cd ~/downloads
-wget -O BitWarden.AppImage https://vault.bitwarden.com/download/?app=desktop&platform=linux
+curl -L https://vault.bitwarden.com/download/?app=desktop&platform=linux --output BitWarden.AppImage
 mkdir -p $BITWARDEN_FOLDER
 mv BitWarden.AppImage $BITWARDEN_FOLDER
