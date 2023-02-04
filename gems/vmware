@@ -8,6 +8,4 @@ if [[ $1 = "r" ]]; then
     exit 0
 fi
 
-curl -L https://www.vmware.com/go/getworkstation-linux --output $BUNDLE_FILE
-
-# rm -rf $BUNDLE_FILE
+echo "[gem] Manual installation is required. Download and run the file from here: https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html"
