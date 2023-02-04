@@ -4,34 +4,18 @@ DEPS="base-devel gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-ke
 libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols \
 cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput"
 
-CONFIG_DIR="$HOME/.config"
-
 HYPR_DIR="$HOME/hypr"
 HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
 HYPR_WAYBAR_DIR="$HYPR_DIR/waybar"
-HYPR_CONFIG_DIR="$CONFIG_DIR/hypr"
-HYPR_CONFIG="$HYPR_CONFIG_DIR/hyprland.conf"
-HYPR_PAPER_CONFIG="$HYPR_CONFIG_DIR/hyprpaper.conf"
-HYPR_WALLPAPERS_DIR="/opt/wall"
 
 HYPR_XDG_DIR="$HYPR_DIR/xdg"
 
-FONTS_DIR="$HOME/fonts"
-IOSEVKA_ZIP_NAME="iosevka.zip"
-IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
-
-FOOT_CONFIG_DIR="$CONFIG_DIR/foot"
-FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
-
 ROFI_DIR="$HOME/rofi"
-ROFI_CONFIG_DIR="$HOME/.config/rofi"
-ROFI_CONFIG="$ROFI_CONFIG_DIR/config.rasi"
 
 SESSIONS_DIR="/usr/share/wayland-sessions"
 
 remove_hypr_dir() {
     rm -rf $HYPR_DIR
-    rm -rf $HYPR_CONFIG_DIR
 }
 
 if [[ $1 = "r" ]]; then
@@ -41,7 +25,7 @@ if [[ $1 = "r" ]]; then
     gem pac R thunar
     gem pac R rofi
     remove_hypr_dir
-    
+
     exit 0
 fi
 
@@ -59,19 +43,11 @@ sudo make install
 sudo mkdir -p $SESSIONS_DIR
 sudo cp /opt/gem/ext/hyprland.desktop $SESSIONS_DIR
 
-mkdir -p $HYPR_CONFIG_DIR
-cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
-
-echo "[gem] [hyprland] Targeted config $HYPR_CONFIG"
-
 echo "[gem] [hyprland] [hyprpaper]"
 git clone https://github.com/hyprwm/hyprpaper.git $HYPR_PAPER_DIR
 cd $HYPR_PAPER_DIR
 make all
 sudo cp ./build/hyprpaper /usr/local/bin
-cp /opt/gem/ext/hyprpaper.config.default $HYPR_PAPER_CONFIG
-sudo mkdir -p $HYPR_WALLPAPERS_DIR
-sudo wget -O $HYPR_WALLPAPERS_DIR/default.jpg https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
 
 #echo "[gem] [hyprland] [waybar]"
 #gem pac S otf-font-awesome gtk-mm
@@ -86,20 +62,8 @@ gem pac S thunar
 echo "[gem] [hyprland] [mako]"
 gem pac S mako
 
-echo "[gem] [hyprland] [fonts] [iosevka]"
-mkdir -p $FONTS_DIR
-if [[ ! -f "$FONTS_DIR/" ]]; then
-    wget -O $IOSEVKA_ZIP https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
-fi
-cd $FONTS_DIR
-unzip -o $IOSEVKA_ZIP_NAME
-sudo cp -f $FONTS_DIR/iosevka.ttc /usr/share/fonts
-fc-cache --force
-
 echo "[gem] [hyprland] [foot]"
 gem pac S foot
-mkdir -p $FOOT_CONFIG_DIR
-cp -f /opt/gem/ext/foot.ini $FOOT_CONFIG
 
 echo "[gem] [hyprland] [xdg-desktop-portal-hyprland]"
 git clone https://github.com/hyprwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DIR
@@ -113,6 +77,3 @@ git clone https://github.com/lbonn/rofi $ROFI_DIR
 cd $ROFI_DIR
 meson setup build
 sudo ninja -C build install
-
-mkdir -p $ROFI_CONFIG_DIR
-printf '@theme "gruvbox-dark-hard"\n' > $ROFI_CONFIG
