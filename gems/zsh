@@ -35,6 +35,4 @@ echo "setopt INTERACTIVE_COMMENTS" | tee -a ~/.zshrc # Comments in shel
 echo "setopt MAGIC_EQUAL_SUBST" | tee -a ~/.zshrc # Helps with expansion edge case
 echo "setopt NULL_GLOB" | tee -a ~/.zshrc # Less reporting
 
-echo "setopt INC_APPEND_HISTORY_TIME" | tee -a ~/.zshrc # Append time taken when command ends
-
 echo "[gem] Reboot for zsh default to take effect..."
