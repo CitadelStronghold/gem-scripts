@@ -5,7 +5,7 @@ FONTS_DIR="$HOME/fonts"
 IOSEVKA_ZIP_NAME="iosevka.zip"
 IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
 IOSEVKA_TTC="iosevka.ttc"
-IOSEVKA_GLYPHS_TTC="Iosevka\ Term\ Nerd\ Font\ Complete\ Bold.ttf"
+IOSEVKA_GLYPHS_TTC="Iosevka Term Nerd Font Complete Bold.ttf"
 
 if [[ $1 = "r" ]]; then
     exit 0
@@ -26,6 +26,6 @@ install_font() {
 }
 
 echo "[gem] [fonts] [iosevka]"
-install_font $IOSEVKA_TTC https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
+install_font "$IOSEVKA_TTC" https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
 echo "[gem] [fonts] [iosevka glyphs]"
-install_font $IOSEVKA_GLYPHS_TTC https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Iosevka.zip
+install_font "$IOSEVKA_GLYPHS_TTC" https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Iosevka.zip
