@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS="git vim which tree ninja cmake make wget unzip fuse2 base-devel"
+DEPS="git neovim which tree ninja cmake make wget unzip fuse2 base-devel"
 
 YAY_FOLDER="$HOME/downloads/yay"
 
