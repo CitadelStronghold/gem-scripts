@@ -39,7 +39,7 @@ echo "setopt MAGIC_EQUAL_SUBST" | tee -a ~/.zshrc # Helps with expansion edge ca
 echo "setopt NULL_GLOB" | tee -a ~/.zshrc # Less reporting
 
 # Background Color
-zsh
+p10k configure
 sudo sed -i "/-g POWERLEVEL9K_BACKGROUND=/c\  typeset -g POWERLEVEL9K_BACKGROUND=16" $HOME/.p10k.zsh
 
 echo "[gem] Reboot for zsh default to take effect..."
