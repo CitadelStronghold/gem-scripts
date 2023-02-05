@@ -14,7 +14,10 @@ windowrule = opacity 0.8 0.8,^(foot)$
 # Execute apps at launch
 exec-once=hyprpaper
 # exec-once=waybar
+
 exec-once=ydotoold
+bind = SUPERALT, C, ydotool type ::
+bind = SUPERALT, D, date +"%m-%d-%y %T" | xargs ydotool type
 
 exec-once=foot -H cbonsai -l
 exec-once=foot -H neofetch
