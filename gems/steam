@@ -8,6 +8,6 @@ fi
 
 echo "[gem] [enable] [multilib] in /etc/pacman.conf"
 sudo sed -i "/multilib\]/s/^#//g" /etc/pacman.conf
-sudo sed '/multilib\]/{N;s/\n#/\n/}' /etc/pacman.conf
+sudo sed -i '/multilib\]/{N;s/\n#/\n/}' /etc/pacman.conf
 
 gem pac S steam
