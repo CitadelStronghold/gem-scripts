@@ -13,3 +13,4 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | tee ~
 
 # chsh -l
 sudo chsh -s /bin/zsh
+echo "[gem] Reboot for zsh to take effect..."
