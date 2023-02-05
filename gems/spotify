@@ -1,9 +1,20 @@
 #!/bin/bash
 
+SPOTIFY_QT_FOLDER="$HOME/spotify-qt"
+
+rm -rf $SPOTIFY_QT_FOLDER
+
 if [[ $1 = "r" ]]; then
-    yay -R spotify-tui
+    # ^
+    sudo rm -f /usr/local/bin/spotify-qt
 
     exit 0
 fi
 
-yay -S spotify-tui
+git clone --branch stable https://github.com/kraxarn/spotify-qt.git
+cd spotify-qt
+mkdir build
+cd build
+cmake .. -G Ninja
+cmake --build .
+sudo cp spotify-qt /usr/local/bin/spotify-qt
