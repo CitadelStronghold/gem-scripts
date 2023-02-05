@@ -11,6 +11,9 @@ gem pac S zsh
 yay -S zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | tee ~/.zshrc
 
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosuggestions
+echo 'source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' | tee ~/.zshrc
+
 # chsh -l
 sudo chsh -s /bin/zsh
 
