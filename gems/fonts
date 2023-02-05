@@ -5,7 +5,7 @@ FONTS_DIR="$HOME/fonts"
 IOSEVKA_ZIP_NAME="iosevka.zip"
 IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
 IOSEVKA_TTC="iosevka.ttc"
-IOSEVKA_GLYPHS_TTC="iosevka_glyphs.ttc"
+IOSEVKA_GLYPHS_TTC="Iosevka Term Nerd Font Complete Bold.ttf"
 
 if [[ $1 = "r" ]]; then
     exit 0
