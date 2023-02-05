@@ -41,4 +41,4 @@ echo "setopt NULL_GLOB" | tee -a ~/.zshrc # Less reporting
 # Background Color
 echo "sed -i \"/-g POWERLEVEL9K_BACKGROUND=/c\  typeset -g POWERLEVEL9K_BACKGROUND=16\" $HOME/.p10k.zsh" | tee -a ~/.zshrc
 
-echo "[gem] Reboot for zsh default to take effect..."
+zsh
