@@ -33,6 +33,6 @@ echo "setopt NOMATCH" | tee -a ~/.zshrc
 echo "setopt NOTIFY" | tee -a ~/.zshrc
 echo "setopt INTERACTIVE_COMMENTS" | tee -a ~/.zshrc # Comments in shel
 echo "setopt MAGIC_EQUAL_SUBST" | tee -a ~/.zshrc # Helps with expansion edge case
-echo "setopt NULL_GLOB' # Less reportin" | tee -a ~/.zshrc
+echo "setopt NULL_GLOB" | tee -a ~/.zshrc # Less reporting
 
 echo "[gem] Reboot for zsh default to take effect..."
