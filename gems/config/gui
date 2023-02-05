@@ -10,11 +10,10 @@ HYPR_DEFUALT_WALLPAPER="$HYPR_WALLPAPERS_DIR/default.jpg"
 
 FONTS_INSTALL_DIR="/usr/share/fonts"
 FONTS_DIR="$HOME/fonts"
-FONTS_GLYPHS_DIR="$HOME/fonts/glyphs"
 IOSEVKA_ZIP_NAME="iosevka.zip"
 IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
 IOSEVKA_TTC="iosevka.ttc"
-IOSEVKA_GLYPHS_TTC="*"
+IOSEVKA_GLYPHS_TTC="iosevka_glyphs.ttc"
 
 FOOT_CONFIG_DIR="$CONFIG_DIR/foot"
 FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
@@ -43,35 +42,23 @@ fi
 
 install_font() {
     if [[ ! -f "$FONTS_INSTALL_DIR/$1" ]]; then
-        mkdir -p $2
+        mkdir -p $FONTS_DIR
 
-        wget -O $IOSEVKA_ZIP $3
+        wget -O $IOSEVKA_ZIP $2
 
-        cd $2
-        unzip -o $IOSEVKA_ZIP_NAME
-        sudo cp -f $2/$1 $FONTS_INSTALL_DIR
+        cd $FONTS_DIR
+        sudo unzip -o $IOSEVKA_ZIP_NAME -d $FONTS_INSTALL_DIR
+        # sudo cp -f $FONTS_DIR/$1 $FONTS_INSTALL_DIR
         fc-cache --force
 
         rm -rf $IOSEVKA_ZIP
     fi
 }
-install_font_glyphs() {
-    mkdir -p $2
-
-    wget -O $IOSEVKA_ZIP $3
-
-    cd $2
-    unzip -o $IOSEVKA_ZIP_NAME
-    sudo cp -f $2/$1 $FONTS_INSTALL_DIR
-    fc-cache --force
-
-    rm -rf $IOSEVKA_ZIP
-}
 
 echo "[gem] [hyprland] [fonts] [iosevka]"
-install_font $IOSEVKA_TTC $FONTS_DIR https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
+install_font $IOSEVKA_TTC https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
 echo "[gem] [foot] [fonts] [iosevka glyphs]"
-install_font_glyphs $IOSEVKA_GLYPHS_TTC $FONTS_GLYPHS_DIR https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Iosevka.zip
+install_font $IOSEVKA_GLYPHS_TTC https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Iosevka.zip
 
 echo "[gem] [config] [foot]"
 mkdir -p $FOOT_CONFIG_DIR
