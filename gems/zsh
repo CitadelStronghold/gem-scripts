@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    gem pac R zsh
+
+    exit 0
+fi
+
+gem pac S zsh
+
+yay -S zsh-theme-powerlevel10k-git
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | tee ~/.zshrc
