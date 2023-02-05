@@ -15,9 +15,9 @@ windowrule = opacity 0.8 0.8,^(foot)$
 exec-once=hyprpaper
 # exec-once=waybar
 
-exec-once=ydotoold # ydotool key -d 0 leftctrl --up && ydotool key -d 0 c --up
-bind = CONTROLALT, C, exec, ydotool type -d 0 ::
-bind = CONTROLALT, D, exec, date +"%m-%d-%y_%T" | xargs "ydotool type -d 0"
+exec-once=ydotoold
+bind = CONTROLALT, C, exec, ydotool key leftctrl --up && ydotool key c --up && ydotool type -d 0 ::
+bind = CONTROLALT, D, exec, ydotool key leftctrl --up && ydotool key d --up && (date +"%m-%d-%y_%T" | xargs ydotool type -d 0)
 
 exec-once=foot -H cbonsai -l
 exec-once=foot -H neofetch
