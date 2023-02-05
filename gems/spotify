@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    yay -R snapd
+
+    exit 0
+fi
+
+yay -S snapd
+snap install spotify
