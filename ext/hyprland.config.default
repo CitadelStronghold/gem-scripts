@@ -17,7 +17,7 @@ exec-once=hyprpaper
 
 exec-once=ydotoold
 bind = CONTROLALT, C, exec, ydotool key leftctrl --up && ydotool key c --up && ydotool type ::
-bind = CONTROLALT, D, exec, ydotool key leftctrl --up && ydotool key d --up && (date +"%m-%d-%y_%T" | xargs ydotool type)
+bind = CONTROLALT, D, exec, ydotool key leftctrl --up && ydotool key d --up && (date +"%m-%d-%y %T" | xargs ydotool type)
 
 exec-once=foot -H cbonsai -l
 exec-once=foot -H neofetch
