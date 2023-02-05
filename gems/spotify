@@ -11,10 +11,10 @@ if [[ $1 = "r" ]]; then
     exit 0
 fi
 
-git clone --branch stable https://github.com/kraxarn/spotify-qt.git
-cd spotify-qt
+git clone --branch stable https://github.com/kraxarn/spotify-qt.git $SPOTIFY_QT_FOLDER
+cd $SPOTIFY_QT_FOLDER
 mkdir build
 cd build
 cmake .. -G Ninja
 cmake --build .
-sudo cp spotify-qt /usr/local/bin/spotify-qt
+sudo cp ./spotify-qt /usr/local/bin/spotify-qt
