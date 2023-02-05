@@ -13,4 +13,26 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | tee ~
 
 # chsh -l
 sudo chsh -s /bin/zsh
-echo "[gem] Reboot for zsh to take effect..."
+
+# https://drasite.com/blog/Pimp%20my%20terminal
+echo "bindkey '^[[2~' overwrite-mode" | tee -a ~/.zshrc
+echo "bindkey '^[[3~' delete-char" | tee -a ~/.zshrc
+echo "bindkey '^[[H' beginning-of-line" | tee -a ~/.zshrc
+echo "bindkey '^[[1~' beginning-of-line" | tee -a ~/.zshrc
+echo "bindkey '^[[F' end-of-line" | tee -a ~/.zshrc
+echo "bindkey '^[[4~' end-of-line" | tee -a ~/.zshrc
+echo "bindkey '^[[1;5C' forward-word" | tee -a ~/.zshrc
+echo "bindkey '^[[1;5D' backward-word" | tee -a ~/.zshrc
+echo "bindkey '^[[3;5~' kill-word" | tee -a ~/.zshrc
+echo "bindkey '^[[5~' beginning-of-buffer-or-history" | tee -a ~/.zshrc
+echo "bindkey '^[[6~' end-of-buffer-or-history" | tee -a ~/.zshrc
+echo "unsetopt NO_BEEP" | tee -a ~/.zshrc
+echo "unsetopt NO_MATCH" | tee -a ~/.zshrc
+echo "setopt AUTO_CD' # Type '..' instead of 'cd .." | tee -a ~/.zshrc
+echo "setopt NOMATCH" | tee -a ~/.zshrc
+echo "setopt NOTIFY" | tee -a ~/.zshrc
+echo "setopt INTERACTIVE_COMMENTS' # Comments in shel" | tee -a ~/.zshrc
+echo "setopt MAGIC_EQUAL_SUBST' # Helps with expansion edge case" | tee -a ~/.zshrc
+echo "setopt NULL_GLOB' # Less reportin" | tee -a ~/.zshrc
+
+echo "[gem] Reboot for zsh default to take effect..."
