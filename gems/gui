@@ -26,6 +26,7 @@ if [[ $1 = "r" ]]; then
     # gem pac R otf-font-awesome gtk-mm
     gem pac R nnn
     gem pac R rofi
+    gem pac R ydotool
     remove_hypr_dir
 
     exit 0
@@ -62,6 +63,9 @@ gem pac S mako
 
 echo "[gem] [hyprland] [foot]"
 gem pac S foot
+
+echo "[gem] [hyprland] [ydotool]"
+gem pac S ydotool
 
 echo "[gem] [hyprland] [xdg-desktop-portal-hyprland]"
 git clone https://github.com/hyprwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DIR
