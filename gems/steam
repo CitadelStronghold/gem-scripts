@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    gem pac R steam
+
+    exit 0
+fi
+
+echo "[gem] [enable] [multilib] in /etc/pacman.conf"
+sudo sed -i "/multilib/s/^#//g" /etc/pacman.conf
+sudo sed '/multilib/{N;s/\n#/\n/}' /etc/pacman.conf
+
+gem pac S steam
