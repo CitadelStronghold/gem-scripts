@@ -3,7 +3,7 @@
 MODE="$1"
 TARGET="$2"
 
-EDITOR="${EDITOR:-vim}"
+EDITOR="${EDITOR:-helix}"
 
 if [[ "$1" = "" ]]; then
     sudo bash /opt/gem/update.sh || exit 1
