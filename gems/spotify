@@ -1,10 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    yay -R snapd
+    yay -R spotify-tui
 
     exit 0
 fi
 
-yay -S snapd
-snap install spotify
+yay -S spotify-tui
