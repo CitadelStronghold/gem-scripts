@@ -27,6 +27,8 @@ install_font() {
     fi
 }
 
+# Use 'fc-list' command
+
 echo "[gem] [fonts] [iosevka]"
 install_font "$IOSEVKA_TTC" https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
 echo "[gem] [fonts] [iosevka glyphs]"
