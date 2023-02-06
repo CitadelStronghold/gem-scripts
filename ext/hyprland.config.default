@@ -17,7 +17,8 @@ exec-once=hyprpaper
 
 exec-once=ydotoold
 bind = SUPER_SHIFT, C, exec, ydotool key 42:1 39:1 39:0 39:1 39:0 42:0
-bind = SUPER_SHIFT, D, exec, (date +"%m-%d-%y %T" | xargs ydotool type) # ydotool key 12:1 12:0
+# ydotool key 12:1 12:0
+bind = SUPER_SHIFT, D, exec, (date +"%m-%d-%y %T" | xargs ydotool type)
 
 exec-once=foot -H cbonsai -l
 exec-once=foot -H neofetch
