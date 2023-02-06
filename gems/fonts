@@ -7,8 +7,6 @@ IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
 IOSEVKA_TTC="iosevka.ttc"
 IOSEVKA_GLYPHS_TTC="Iosevka Term Nerd Font Complete Bold.ttf"
 
-NOTO_COLOR_EMOJI_TTF="NotoColorEmoji-Regular.ttf"
-
 if [[ $1 = "r" ]]; then
     exit 0
 fi
@@ -33,6 +31,3 @@ echo "[gem] [fonts] [iosevka]"
 install_font "$IOSEVKA_TTC" https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
 echo "[gem] [fonts] [iosevka glyphs]"
 install_font "$IOSEVKA_GLYPHS_TTC" https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Iosevka.zip
-
-echo "[gem] [fonts] [noto emoji]"
-install_font "$NOTO_COLOR_EMOJI_TTF" https://fonts.google.com/download?family=Noto%20Color%20Emoji
