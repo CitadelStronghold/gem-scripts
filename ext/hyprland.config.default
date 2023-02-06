@@ -131,7 +131,7 @@ bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
 bind = $mainMod, V, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
 bind = $mainMod, F, togglefloating
 bind = $mainMod, R, exec, rofi -show drun
-bind = $mainMod, G, exec, rofi -modi "emoji:/usr/bin/rofimoji --action clipboard" -show emoji
+bind = $mainMod, G, exec, rofi -modi "emoji:/usr/bin/rofimoji" -show emoji
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, N, togglesplit, # dwindle
 bind = $mainMod, Z, fullscreen
