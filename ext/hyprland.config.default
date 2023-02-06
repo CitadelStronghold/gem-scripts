@@ -16,7 +16,7 @@ exec-once=hyprpaper
 # exec-once=waybar
 
 exec-once=ydotoold
-bind = CONTROLALT, C, exec, ydotool key leftctrl --up && ydotool key c --up && ydotool type ::
+bind = CONTROLALT, C, exec, ydotool key leftctrl --up && ydotool key c --up && ydotool key 39:1 39:0 39:1 39:0
 bind = CONTROLALT, D, exec, ydotool key leftctrl --up && ydotool key d --up && ydotool type -
 
 exec-once=foot -H cbonsai -l
