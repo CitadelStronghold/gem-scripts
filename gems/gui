@@ -85,3 +85,6 @@ git clone https://github.com/lbonn/rofi $ROFI_DIR
 cd $ROFI_DIR
 meson setup build
 sudo ninja -C build install
+
+echo "[gem] [hyprland] [rofi] [rofimoji]"
+gem pac S rofimoji

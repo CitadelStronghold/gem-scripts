@@ -129,9 +129,9 @@ bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
 bind = $mainMod, V, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
-bind = $mainMod, G, exec, google-chrome-stable https://picmojs.com/storybook/?path=/story/emoji-picker--native
 bind = $mainMod, F, togglefloating
 bind = $mainMod, R, exec, rofi -show drun
+bind = $mainMod, G, exec, rofi -modi "emoji:" -show emoji
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, N, togglesplit, # dwindle
 bind = $mainMod, Z, fullscreen
