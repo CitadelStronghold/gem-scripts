@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    yay -R input-remapper-git
+
+    exit 0
+fi
+
+yay -S input-remapper-git
