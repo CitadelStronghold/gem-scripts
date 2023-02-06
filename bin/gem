@@ -44,6 +44,8 @@ if [[ "$1" = "c" ]]; then
         $EDITOR ~/.config/foot/foot.ini
     elif [[ "$2" = "rofi" ]]; then
         $EDITOR ~/.config/rofi/config.rasi
+    elif [[ "$2" = "rofimoji" ]]; then
+        $EDITOR ~/.config/rofimoji.rc
     fi
 
     exit 0
