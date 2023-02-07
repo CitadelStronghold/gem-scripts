@@ -126,6 +126,7 @@ device:epic mouse V1 {
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 $mainMod = SUPER
+$secondaryMod = SUPER_SHIFT
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for mor
 bind = $mainMod, C, killactive,
@@ -134,6 +135,7 @@ bind = $mainMod, T, exec, foot
 bind = $mainMod, E, exec, foot nnn
 bind = $mainMod, X, exec, code
 bind = $mainMod, B, exec, google-chrome-stable # --force-device-scale-factor=1.5
+bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu
 bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, S, exec, spotify-qt
