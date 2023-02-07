@@ -2,8 +2,9 @@
 
 DEPS="inotify-tools"
 
-BRISQI_FOLDER="$HOME/brisqi"
+BRISQI_APP_FOLDER="$HOME/brisqi"
 BRISQI_APPIMAGE_NAME="Brisqi.AppImage"
+CARDS_FOLDER="$BRISQI_APP_FOLDER/cards"
 
 rm -rf $BRISQI_FOLDER
 
@@ -21,5 +22,7 @@ curl -L 'https://github.com/Brisqi/releases/releases/download/v0.11.0/Brisqi-set
 
 chmod +x $BRISQI_APPIMAGE_NAME
 
-mkdir -p $BRISQI_FOLDER
-mv $BRISQI_APPIMAGE_NAME $BRISQI_FOLDER
+mkdir -p $BRISQI_APP_FOLDER
+mv $BRISQI_APPIMAGE_NAME $BRISQI_APP_FOLDER
+
+git clone https://github.com/GeodeGames/cards.git $CARDS_FOLDER
