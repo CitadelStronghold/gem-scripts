@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS="cronie vi"
+DEPS="cronie vim"
 
 BRISQI_FOLDER="$HOME/brisqi"
 BRISQI_APPIMAGE_NAME="Brisqi.AppImage"
