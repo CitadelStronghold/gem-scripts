@@ -7,9 +7,12 @@ rm -rf $BRISQI_FOLDER
 
 if [[ $1 = "r" ]]; then
     # ^
+    gem pac R cronie
 
     exit 0
 fi
+
+gem pac S cronie
 
 cd ~/downloads
 curl -L 'https://github.com/Brisqi/releases/releases/download/v0.11.0/Brisqi-setup-0.11.0-linux-x86_64.AppImage' --output $BRISQI_APPIMAGE_NAME
