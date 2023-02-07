@@ -1,0 +1,16 @@
+#!/bin/bash
+
+BRISQI_FOLDER="$HOME/brisqi"
+BRISQI_APPIMAGE_NAME="Brisqi.AppImage"
+
+if [[ $1 = "r" ]]; then
+    rm -rf $BRISQI_FOLDER
+
+    exit 0
+fi
+
+cd ~/downloads
+curl -L 'https://brisqi.com/thanks?type=appimage' --output $BRISQI_APPIMAGE_NAME
+
+mkdir -p $BRISQI_FOLDER
+mv $BRISQI_APPIMAGE_NAME $BRISQI_FOLDER
