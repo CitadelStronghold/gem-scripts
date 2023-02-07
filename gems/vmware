@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VMWARE_FOLDER="$HOME/.vmware"
+
 if [[ $1 = "r" ]]; then
     yay -R vmware-workstation
 
@@ -8,3 +10,6 @@ fi
 
 yay -S vmware-workstation
 sudo modprobe -a vmw_vmci vmmon
+
+mkdir -p $VMWARE_FOLDER
+printf "#!/bin/bash\n\nsudo systemctl start vmware-networks\nvmware\nsudo systemctl stop vmware-networks\n" | tee $VMWARE_FOLDER/vmware.sh

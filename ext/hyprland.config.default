@@ -139,7 +139,7 @@ bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, S, exec, spotify-qt
 bind = $mainMod, A, exec, pavucontrol
 bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
-bind = $mainMod, M, exec, sudo systemctl start vmware-networks && vmware && sudo systemctl stop vmware-networks
+bind = $mainMod, M, exec, bash ~/.vmware/vmware.sh
 bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
 bind = $mainMod, V, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
 bind = $mainMod, F, togglefloating
