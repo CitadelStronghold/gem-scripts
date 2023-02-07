@@ -1,5 +1,6 @@
 #!/bin/bash
 
+CONFIG_FOLDER="$HOME/.config"
 SPOTIFY_QT_FOLDER="$HOME/spotify-qt"
 
 rm -rf $SPOTIFY_QT_FOLDER
@@ -7,12 +8,14 @@ rm -rf $SPOTIFY_QT_FOLDER
 if [[ $1 = "r" ]]; then
     # ^
     sudo rm -f /usr/local/bin/spotify-qt
+    gem pac R spotifyd
     # gem pac R qt6-base qt6-svg qt6-wayland
 
     exit 0
 fi
 
 gem pac S qt6-base qt6-svg qt6-wayland
+gem pac S spotifyd
 
 git clone --branch stable https://github.com/kraxarn/spotify-qt.git $SPOTIFY_QT_FOLDER
 cd $SPOTIFY_QT_FOLDER
@@ -21,3 +24,6 @@ cd build
 cmake .. -G Ninja
 cmake --build .
 sudo cp ./spotify-qt /usr/local/bin/spotify-qt
+
+mkdir -p $CONFIG_FOLDER
+cp -f /opt/gem/ext/spotifyd.conf $CONFIG_FOLDER/spotifyd
