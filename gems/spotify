@@ -23,7 +23,7 @@ mkdir build
 cd build
 cmake .. -G Ninja
 cmake --build .
-sudo cp ./spotify-qt /usr/local/bin/spotify-qt
+sudo cp -f ./spotify-qt /usr/local/bin/spotify-qt
 
 mkdir -p $CONFIG_FOLDER
 cp -f /opt/gem/ext/spotifyd.conf $CONFIG_FOLDER
