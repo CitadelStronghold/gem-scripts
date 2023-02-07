@@ -3,13 +3,17 @@
 CONFIG_FOLDER="$HOME/.config"
 CONFIG="$CONFIG_FOLDER/code-flags.conf"
 
+DEPS="gnome-keyring libsecret libgnome-keyring"
+
 if [[ $1 = "r" ]]; then
     sudo rm -f $CONFIG
+    gem pac R $DEPS
     yay -R visual-studio-code-bin
     
     exit 0
 fi
 
+gem pac S $DEPS
 yay -S visual-studio-code-bin
 
 mkdir -p $CONFIG_FOLDER
