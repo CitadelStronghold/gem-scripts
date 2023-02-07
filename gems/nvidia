@@ -1,0 +1,14 @@
+#!/bin/bash
+
+MOD_PROBE_DIR="/etc/modprobe.d"
+
+if [[ $1 = "r" ]]; then
+    gem pac R nvidia-dkms
+
+    exit 0
+fi
+
+gem pac S nvidia-dkms
+
+mkdir -p $MOD_PROBE_DIR
+printf "options nvidia-drm modeset=1\n" | sudo tee $MOD_PROBE_DIR/nvidia.conf
