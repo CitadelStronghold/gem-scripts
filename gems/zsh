@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    gem pac R zsh
+    gem pac R zsh exa
 
     exit 0
 fi
 
-gem pac S zsh
+gem pac S zsh exa
 
 yay -S zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | tee ~/.zshrc
@@ -37,6 +37,8 @@ echo "setopt NOTIFY" | tee -a ~/.zshrc
 echo "setopt INTERACTIVE_COMMENTS" | tee -a ~/.zshrc # Comments in shel
 echo "setopt MAGIC_EQUAL_SUBST" | tee -a ~/.zshrc # Helps with expansion edge case
 echo "setopt NULL_GLOB" | tee -a ~/.zshrc # Less reporting
+
+echo "alias ls=exa" | tee -a ~/.zshrc # ls is exa
 
 # Background Color
 echo "sed -i \"/-g POWERLEVEL9K_BACKGROUND=/c\  typeset -g POWERLEVEL9K_BACKGROUND=16\" $HOME/.p10k.zsh" | tee -a ~/.zshrc
