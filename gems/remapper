@@ -1,9 +1,11 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
+    gem pac R polkit-gnome
     yay -R input-remapper-git
 
     exit 0
 fi
 
+gem pac S polkit-gnome
 yay -S input-remapper-git

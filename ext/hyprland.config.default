@@ -12,6 +12,9 @@ monitor=HDMI-A-1,1920x1080@60,0x1715,1
 
 exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
+# See `remapper`
+exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 windowrule = opacity 0.8 0.8,^(foot)$
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
