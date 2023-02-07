@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DEPS="nvidia-dkms libva qt6-wayland qt6ct"
+
 MOD_PROBE_DIR="/etc/modprobe.d"
 
 if [[ $1 = "r" ]]; then
