@@ -46,6 +46,8 @@ if [[ "$1" = "c" ]]; then
         $EDITOR ~/.config/rofi/config.rasi
     elif [[ "$2" = "rofimoji" ]]; then
         $EDITOR ~/.config/rofimoji.rc
+    elif [[ "$2" = "init" ]]; then
+        (sudo $EDITOR /etc/mkinitcpio.conf) && (sudo mkinitcpio -P)
     fi
 
     exit 0
