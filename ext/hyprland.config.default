@@ -24,8 +24,8 @@ exec-once=ydotoold
 bind = SUPER_SHIFT, C, exec, ydotool key 42:1 39:1 39:0 39:1 39:0 42:0
 bind = SUPER_SHIFT, D, exec, ydotool key 42:1 13:1 13:0 42:0
 
-exec-once=foot -H cbonsai -l
-exec-once=foot -H neofetch
+# exec-once=foot -H cbonsai -l
+# exec-once=foot -H neofetch
 exec-once=foot -H btop
 
 # Source a file (multi-file configs)
