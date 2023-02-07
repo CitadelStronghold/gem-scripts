@@ -1,9 +1,11 @@
 #!/bin/bash
 
+DEPS="obs-studio pipewire"
+
 if [[ $1 = "r" ]]; then
-    gem pac R obs-studio
+    gem pac R $DEPS
 
     exit 0
 fi
 
-gem pac S obs-studio
+gem pac S $DEPS
