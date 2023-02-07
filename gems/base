@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DEPS="git neovim helix base-devel"
+
+if [[ $1 = "r" ]]; then
+    gem pac R $DEPS
+
+    exit 0
+fi
+
+sudo pacman -Syu
+
+gem pac S $DEPS
