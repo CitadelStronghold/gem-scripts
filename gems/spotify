@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG_FOLDER="$HOME/.config"
+CONFIG_FOLDER="$HOME/.config/spotifyd"
 SPOTIFY_QT_FOLDER="$HOME/spotify-qt"
 
 rm -rf $SPOTIFY_QT_FOLDER
@@ -25,5 +25,5 @@ cmake .. -G Ninja
 cmake --build .
 sudo cp ./spotify-qt /usr/local/bin/spotify-qt
 
-# mkdir -p $CONFIG_FOLDER
-# cp -f /opt/gem/ext/spotifyd.conf $CONFIG_FOLDER/spotifyd
+mkdir -p $CONFIG_FOLDER
+cp -f /opt/gem/ext/spotifyd.conf $CONFIG_FOLDER
