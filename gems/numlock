@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    yay -R mkinitcpio-numlock
+
+    exit 0
+fi
+
+yay -S mkinitcpio-numlock
