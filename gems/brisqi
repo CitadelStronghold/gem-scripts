@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS=""
+DEPS="inotify-tools"
 
 BRISQI_FOLDER="$HOME/brisqi"
 BRISQI_APPIMAGE_NAME="Brisqi.AppImage"
@@ -9,12 +9,12 @@ rm -rf $BRISQI_FOLDER
 
 if [[ $1 = "r" ]]; then
     # ^
-    # gem pac R $DEPS
+    gem pac R $DEPS
 
     exit 0
 fi
 
-# gem pac S $DEPS
+gem pac S $DEPS
 
 cd ~/downloads
 curl -L 'https://github.com/Brisqi/releases/releases/download/v0.11.0/Brisqi-setup-0.11.0-linux-x86_64.AppImage' --output $BRISQI_APPIMAGE_NAME
