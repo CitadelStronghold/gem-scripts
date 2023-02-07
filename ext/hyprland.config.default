@@ -138,7 +138,7 @@ bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, S, exec, spotify-qt
 bind = $mainMod, A, exec, pavucontrol
-bind = $mainMod, O, exec, QT_QPA_PLATFORM=xcb obs
+bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
 bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
 bind = $mainMod, V, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
 bind = $mainMod, F, togglefloating
