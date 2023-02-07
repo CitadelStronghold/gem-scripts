@@ -53,8 +53,8 @@ input {
 general {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-    gaps_in = 4
-    gaps_out = 8
+    gaps_in = 0 # 4
+    gaps_out = 0 # 8
     border_size = 0
     col.active_border = rgba(efefef44) # rgba(33ccff55) rgba(00ff9955) 45deg
     col.inactive_border = rgba(efefef11)
@@ -65,7 +65,7 @@ general {
 decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-    rounding = 4
+    rounding = 0 # 8
     multisample_edges = true
     blur = yes
     blur_size = 6
