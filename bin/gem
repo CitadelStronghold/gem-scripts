@@ -48,6 +48,8 @@ if [[ "$1" = "c" ]]; then
         $EDITOR ~/.config/rofimoji.rc
     elif [[ "$2" = "init" ]]; then
         (sudo $EDITOR /etc/mkinitcpio.conf) && (sudo mkinitcpio -P)
+    elif [[ "$2" = "grub" ]]; then
+        (sudo $EDITOR /etc/default/grub) && (gem s config/grub)
     fi
 
     exit 0
