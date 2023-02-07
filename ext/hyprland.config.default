@@ -126,7 +126,7 @@ device:epic mouse V1 {
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 $mainMod = SUPER
-$secondaryMod = SUPER_SHIFT
+$secondaryMod = SUPER_ALT
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for mor
 bind = $mainMod, C, killactive,
