@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    gem pac R obs-studio
+
+    exit 0
+fi
+
+gem pac S obs-studio
