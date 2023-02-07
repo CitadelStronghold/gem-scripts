@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    yay -R octopi
+
+    exit 0
+fi
+
+yay -S octopi
