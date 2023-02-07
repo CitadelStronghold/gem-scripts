@@ -15,6 +15,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosu
 echo 'source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' | tee -a ~/.zshrc
 
 # chsh -l
+chsh -s /bin/zsh
+# For root as well
 sudo chsh -s /bin/zsh
 
 # https://drasite.com/blog/Pimp%20my%20terminal
