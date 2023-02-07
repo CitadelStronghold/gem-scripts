@@ -12,5 +12,7 @@ fi
 cd ~/downloads
 curl -L 'https://brisqi.com/thanks?type=appimage' --output $BRISQI_APPIMAGE_NAME
 
+chmod +x $BRISQI_APPIMAGE_NAME
+
 mkdir -p $BRISQI_FOLDER
 mv $BRISQI_APPIMAGE_NAME $BRISQI_FOLDER
