@@ -14,6 +14,3 @@ yay -S google-chrome
 
 mkdir -p $CONFIG_FOLDER
 echo "--ozone-platform-hint=auto" | tee $CONFIG
-
-echo "[gem] [chrome] Scaling to 2x"
-sudo sed -i "/Exec=\/usr\/bin\/google-chrome-stable %U/c\Exec=/usr/bin/google-chrome-stable %U --force-device-scale-factor=1.5" /usr/share/applications/google-chrome.desktop

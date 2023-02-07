@@ -130,7 +130,7 @@ bind = $mainMod, Q, exit
 bind = $mainMod, T, exec, foot
 bind = $mainMod, E, exec, foot nnn
 bind = $mainMod, X, exec, code
-bind = $mainMod, B, exec, google-chrome-stable
+bind = $mainMod, B, exec, google-chrome-stable --force-device-scale-factor=1.5
 bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, M, exec, spotify-qt
