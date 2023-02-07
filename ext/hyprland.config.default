@@ -6,9 +6,9 @@
 # See https://wiki.hyprland.org/Configuring/Monitors/
 monitor=,1280x720,0x0,1
 monitor=DP-1,3440x1440@165,1920x1440,1
-monitor=DP-2,3840x2160@60,5360x1440,1.5
-monitor=DP-3,2560x1440@240,1920x0,1
-monitor=HDMI-A-1,1920x1080@60,0x1440,1
+monitor=DP-2,3840x2160@60,5360x1640,1.5
+monitor=DP-3,2560x1440@240,2360x0,1
+monitor=HDMI-A-1,1920x1080@60,0x1715,1
 
 exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
