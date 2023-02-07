@@ -14,7 +14,8 @@ HYPR_PICKER_DIR="$HYPR_DIR/picker"
 
 ROFI_DIR="$HYPR_DIR/rofi"
 
-SESSIONS_DIR="/usr/share/wayland-sessions"
+WAYLAND_SESSIONS_DIR="/usr/share/wayland-sessions"
+X_SESSIONS_DIR="/usr/share/xsessions"
 
 remove_hypr_dir() {
     rm -rf $HYPR_DIR
@@ -40,8 +41,10 @@ git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 cd $HYPR_DIR
 sudo make install
 
-sudo mkdir -p $SESSIONS_DIR
-sudo cp /opt/gem/ext/hyprland.desktop $SESSIONS_DIR
+sudo mkdir -p $WAYLAND_SESSIONS_DIR
+sudo cp /opt/gem/ext/hyprland.desktop $WAYLAND_SESSIONS_DIR
+sudo mkdir -p $X_SESSIONS_DIR
+sudo cp /opt/gem/ext/hyprland.desktop $X_SESSIONS_DIR
 
 echo "[gem] [hyprland] [hyprpaper]"
 git clone https://github.com/hyprwm/hyprpaper.git $HYPR_PAPER_DIR
