@@ -12,7 +12,7 @@ if [[ $1 = "r" ]]; then
 fi
 
 cd ~/downloads
-curl -L 'https://brisqi.com/thanks?type=appimage' --output $BRISQI_APPIMAGE_NAME
+curl -L 'https://github.com/Brisqi/releases/releases/download/v0.11.0/Brisqi-setup-0.11.0-linux-x86_64.AppImage' --output $BRISQI_APPIMAGE_NAME
 
 chmod +x $BRISQI_APPIMAGE_NAME
 
