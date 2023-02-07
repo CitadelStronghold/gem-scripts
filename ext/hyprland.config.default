@@ -133,6 +133,7 @@ bind = $mainMod, B, exec, google-chrome-stable # --force-device-scale-factor=1.5
 bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, S, exec, spotify-qt
+bind = $mainMod, A, exec, pavucontrol
 bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
 bind = $mainMod, V, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
 bind = $mainMod, F, togglefloating

@@ -94,3 +94,6 @@ echo "[gem] [hyprland] [rofi] [rofimoji]"
 gem pac S rofimoji
 
 yay -S swaylock-effects
+
+echo "[gem] [hyprland] [pavucontrol]"
+gem pac S pavucontrol
