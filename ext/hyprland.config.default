@@ -17,7 +17,7 @@ exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once=input-remapper-control --command autoload
 
 # See `brisqi`
-exec-once=bash ~/cards/monitor.sh
+exec-once=bash ~/brisqi/cards/monitor.sh
 
 windowrule = opacity 0.8 0.8,^(foot)$
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
