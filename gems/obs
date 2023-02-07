@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS="obs-studio pipewire"
+DEPS="obs-studio"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
