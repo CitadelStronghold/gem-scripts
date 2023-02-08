@@ -7,6 +7,10 @@
         "1,9,1": [
             "KEY_ENTER",
             "keyboard"
+        ],
+        "1,7,1": [
+            "KEY_DELETE",
+            "keyboard"
         ]
     }
 }
