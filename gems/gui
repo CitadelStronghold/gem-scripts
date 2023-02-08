@@ -28,7 +28,7 @@ if [[ $1 = "r" ]]; then
     gem pac R nnn
     gem pac R rofi
     gem pac R ydotool
-    yay -R swaylock-effects
+    gem yay R swaylock-effects
     remove_hypr_dir
 
     exit 0
@@ -94,7 +94,7 @@ sudo ninja -C build install
 echo "[gem] [hyprland] [rofi] [rofimoji]"
 gem pac S rofimoji
 
-yay -S swaylock-effects
+gem yay S swaylock-effects
 
 echo "[gem] [hyprland] [pavucontrol]"
 gem pac S pavucontrol

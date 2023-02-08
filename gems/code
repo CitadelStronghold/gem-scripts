@@ -8,13 +8,13 @@ DEPS="gnome-keyring libsecret libgnome-keyring"
 if [[ $1 = "r" ]]; then
     sudo rm -f $CONFIG
     gem pac R $DEPS
-    yay -R visual-studio-code-bin
-    
+    gem yay R visual-studio-code-bin
+
     exit 0
 fi
 
 gem pac S $DEPS
-yay -S visual-studio-code-bin
+gem yay S visual-studio-code-bin
 
 mkdir -p $CONFIG_FOLDER
 echo "--ozone-platform-hint=auto" | tee $CONFIG

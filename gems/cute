@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    yay -R cbonsai
+    gem yay R cbonsai
     gem pac R neofetch
 
     exit 0
 fi
 
-yay -S cbonsai
+gem yay S cbonsai
 gem pac S neofetch
