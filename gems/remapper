@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REMAPPER_CONFIG_EXT_FOLDER="/opt/ext/input-remapper"
+REMAPPER_CONFIG_EXT_FOLDER="/opt/gem/ext/input-remapper"
 REMAPPER_CONFIG_FOLDER="$HOME/.config/input-remapper"
 
 if [[ $1 = "r" ]]; then
