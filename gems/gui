@@ -71,6 +71,7 @@ gem pac S foot
 
 echo "[gem] [hyprland] [ydotool]"
 gem pac S ydotool
+sudo chmod u+s /bin/ydotool /bin/ydotoold # Allow non-root users to use it
 
 echo "[gem] [hyprland] [xdg-desktop-portal-hyprland]"
 git clone https://github.com/hyprwm/xdg-desktop-portal-hyprland.git $HYPR_XDG_DIR
