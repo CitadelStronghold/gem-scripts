@@ -1,5 +1,8 @@
 #!/bin/bash
 
+REMAPPER_CONFIG_EXT_FOLDER="/opt/ext/input-remapper"
+REMAPPER_CONFIG_FOLDER="$HOME/.config/input-remapper"
+
 if [[ $1 = "r" ]]; then
     gem pac R polkit-gnome
     yay -R input-remapper-git
@@ -11,3 +14,6 @@ gem pac S polkit-gnome
 yay -S input-remapper-git
 
 sudo systemctl enable input-remapper
+
+mkdir -p $REMAPPER_CONFIG_FOLDER
+cp -rf $REMAPPER_CONFIG_EXT_FOLDER $REMAPPER_CONFIG_FOLDER

@@ -1,0 +1,12 @@
+{
+    "mapping": {
+        "1,6,1": [
+            "KEY_BACKSPACE",
+            "keyboard"
+        ],
+        "1,9,1": [
+            "KEY_ENTER",
+            "keyboard"
+        ]
+    }
+}
