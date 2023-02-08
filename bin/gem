@@ -3,7 +3,7 @@
 MODE="$1"
 TARGET="$2"
 
-EDITOR="${EDITOR:-helix}"
+GEM_EDITOR="${GEM_EDITOR:-helix}"
 
 if [[ "$1" = "" ]]; then
     sudo bash /opt/gem/update.sh || exit 1
@@ -37,19 +37,19 @@ fi
 
 if [[ "$1" = "c" ]]; then
     if [[ "$2" = "hypr" || "$2" = "hyprland" ]]; then
-        $EDITOR ~/.config/hypr/hyprland.conf
+        $GEM_EDITOR ~/.config/hypr/hyprland.conf
     elif [[ "$2" = "paper" ]]; then
-        $EDITOR ~/.config/hypr/hyprpaper.conf
+        $GEM_EDITOR ~/.config/hypr/hyprpaper.conf
     elif [[ "$2" = "foot" ]]; then
-        $EDITOR ~/.config/foot/foot.ini
+        $GEM_EDITOR ~/.config/foot/foot.ini
     elif [[ "$2" = "rofi" ]]; then
-        $EDITOR ~/.config/rofi/config.rasi
+        $GEM_EDITOR ~/.config/rofi/config.rasi
     elif [[ "$2" = "rofimoji" ]]; then
-        $EDITOR ~/.config/rofimoji.rc
+        $GEM_EDITOR ~/.config/rofimoji.rc
     elif [[ "$2" = "init" ]]; then
-        (sudo $EDITOR /etc/mkinitcpio.conf) && (sudo mkinitcpio -P)
+        (sudo $GEM_EDITOR /etc/mkinitcpio.conf) && (sudo mkinitcpio -P)
     elif [[ "$2" = "grub" ]]; then
-        (sudo $EDITOR /etc/default/grub) && (gem s config/grub)
+        (sudo $GEM_EDITOR /etc/default/grub) && (gem s config/grub)
     fi
 
     exit 0
