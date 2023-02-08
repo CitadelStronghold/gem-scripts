@@ -137,7 +137,7 @@ bind = $mainMod, Q, exit
 bind = $mainMod, T, exec, foot
 bind = $mainMod, E, exec, foot nnn
 bind = $mainMod, X, exec, code
-bind = $mainMod, B, exec, google-chrome-stable # --force-device-scale-factor=1.5
+bind = $mainMod, B, exec, google-chrome-stable --disable-gpu --disable-gpu-compositing # --force-device-scale-factor=1.5
 bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu
 bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
