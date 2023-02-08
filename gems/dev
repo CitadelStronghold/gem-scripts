@@ -2,6 +2,7 @@
 
 DEPS="git neovim helix which tree ninja cmake make wget unzip fuse2 base-devel"
 
+WORK_FOLDER="$HOME/work"
 YAY_FOLDER="$HOME/downloads/yay"
 
 if [[ $1 = "r" ]]; then
@@ -10,6 +11,8 @@ if [[ $1 = "r" ]]; then
 
     exit 0
 fi
+
+mkdir -p $WORK_FOLDER
 
 gem pac S $DEPS
 
