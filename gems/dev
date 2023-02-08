@@ -12,10 +12,9 @@ if [[ $1 = "r" ]]; then
     exit 0
 fi
 
-mkdir -p $WORK_FOLDER
-
 gem pac S $DEPS
 
+mkdir -p $WORK_FOLDER
 git config --global credential.helper store
 
 git clone https://aur.archlinux.org/yay.git $YAY_FOLDER
