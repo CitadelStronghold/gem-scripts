@@ -8,7 +8,7 @@ fi
 
 gem pac S zsh exa
 
-gem yay S zsh-theme-powerlevel10k-git
+gem aur S zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' | tee ~/.zshrc
 
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosuggestions

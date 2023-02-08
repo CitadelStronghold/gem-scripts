@@ -3,12 +3,12 @@
 VMWARE_FOLDER="$HOME/.vmware"
 
 if [[ $1 = "r" ]]; then
-    gem yay R vmware-workstation
+    gem aur R vmware-workstation
 
     exit 0
 fi
 
-gem yay S vmware-workstation
+gem aur S vmware-workstation
 sudo modprobe -a vmw_vmci vmmon
 
 mkdir -p $VMWARE_FOLDER

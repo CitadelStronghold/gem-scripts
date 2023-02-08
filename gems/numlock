@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    gem yay R mkinitcpio-numlock
+    gem aur R mkinitcpio-numlock
 
     exit 0
 fi
 
-gem yay S mkinitcpio-numlock
+gem aur S mkinitcpio-numlock

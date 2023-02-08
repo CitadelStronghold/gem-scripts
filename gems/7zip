@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ $1 = "r" ]]; then
-    gem yay R 7-zip
+    gem aur R 7-zip
 
     exit 0
 fi
 
-gem yay S 7-zip
+gem aur S 7-zip

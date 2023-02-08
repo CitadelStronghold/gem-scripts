@@ -5,12 +5,12 @@ CONFIG="$CONFIG_FOLDER/chrome-flags.conf"
 
 if [[ $1 = "r" ]]; then
     rm -f $CONFIG
-    gem yay R google-chrome
+    gem aur R google-chrome
 
     exit 0
 fi
 
-gem yay S google-chrome
+gem aur S google-chrome
 
 mkdir -p $CONFIG_FOLDER
 echo "--ozone-platform-hint=auto" | tee $CONFIG

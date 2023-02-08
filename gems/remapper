@@ -5,13 +5,13 @@ REMAPPER_CONFIG_FOLDER="$HOME/.config"
 
 if [[ $1 = "r" ]]; then
     gem pac R polkit-gnome
-    gem yay R input-remapper-git
+    gem aur R input-remapper-git
 
     exit 0
 fi
 
 gem pac S polkit-gnome
-gem yay S input-remapper-git
+gem aur S input-remapper-git
 
 sudo systemctl enable input-remapper
 
