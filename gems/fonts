@@ -2,8 +2,10 @@
 
 FONTS_INSTALL_DIR="/usr/share/fonts"
 FONTS_DIR="$HOME/fonts"
-IOSEVKA_ZIP_NAME="iosevka.zip"
-IOSEVKA_ZIP="$FONTS_DIR/$IOSEVKA_ZIP_NAME"
+
+FONT_ZIP_NAME="font.zip"
+FONT_ZIP="$FONTS_DIR/$FONT_ZIP_NAME"
+
 IOSEVKA_TTC="iosevka.ttc"
 IOSEVKA_GLYPHS_TTC="Iosevka Term Nerd Font Complete Bold.ttf"
 
@@ -15,13 +17,13 @@ install_font() {
     if [[ ! -f "$FONTS_INSTALL_DIR/$1" ]]; then
         mkdir -p $FONTS_DIR
 
-        wget -O $IOSEVKA_ZIP $2
+        wget -O $FONT_ZIP $2
 
         cd $FONTS_DIR
-        sudo unzip -o $IOSEVKA_ZIP_NAME -d $FONTS_INSTALL_DIR
+        sudo unzip -o $FONT_ZIP_NAME -d $FONTS_INSTALL_DIR
         fc-cache --force
 
-        rm -rf $IOSEVKA_ZIP
+        rm -rf $FONT_ZIP
     fi
 }
 
