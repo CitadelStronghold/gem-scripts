@@ -3,7 +3,7 @@
 ARGS="${@:2}"
 
 if [[ "$1" = "S" ]]; then
-    yay -S --cleanafter $ARGS
+    yay -S --cleanafter --removemake $ARGS
 
     exit 0
 fi
