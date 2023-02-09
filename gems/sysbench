@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 = "r" ]]; then
+    gem pac R sysbench
+
+    exit 0
+fi
+
+gem pac S sysbench
