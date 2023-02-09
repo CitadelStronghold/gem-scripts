@@ -3,13 +3,13 @@
 ARGS="${@:2}"
 
 if [[ "$1" = "S" ]]; then
-    yay -S --cleanafter --removemake $ARGS
+    paru -S --removemake $ARGS
 
     exit 0
 fi
 
 if [[ "$1" = "R" ]]; then
-    yay -R $ARGS
+    paru -R $ARGS
 
     exit 0
 fi

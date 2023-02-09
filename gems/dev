@@ -3,11 +3,11 @@
 DEPS="git neovim helix which tree ninja cmake make wget unzip fuse2 base-devel"
 
 WORK_FOLDER="$HOME/work"
-YAY_FOLDER="$HOME/downloads/yay"
+PARU_FOLDER="$HOME/downloads/paru"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
-    gem pac R yay
+    gem pac R paru
 
     exit 0
 fi
@@ -17,9 +17,9 @@ gem pac S $DEPS
 mkdir -p $WORK_FOLDER
 git config --global credential.helper store
 
-git clone https://aur.archlinux.org/yay.git $YAY_FOLDER
-cd $YAY_FOLDER
+git clone https://aur.archlinux.org/paru.git $PARU_FOLDER
+cd $PARU_FOLDER
 makepkg -si
 cd $HOME
-rm -rf $YAY_FOLDER
-yay
+rm -rf $PARU_FOLDER
+paru
