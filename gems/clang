@@ -1,9 +1,11 @@
 #!/bin/bash
 
+DEPS="clang lldb"
+
 if [[ $1 = "r" ]]; then
-    gem pac R clang
+    gem pac R $DEPS
 
     exit 0
 fi
 
-gem pac S clang
+gem pac S $DEPS
