@@ -140,6 +140,7 @@ bind = $mainMod, X, exec, code
 bind = $mainMod, B, exec, google-chrome-stable --disable-gpu --disable-gpu-compositing # --force-device-scale-factor=1.5
 bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu
 bind = $secondaryMod, V, exec, vmware
+bind = $secondaryMod, S, exec, steam
 bind = $mainMod, D, exec, discord
 bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, S, exec, spotify-qt
