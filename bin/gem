@@ -61,4 +61,10 @@ if [[ "$1" = "c" ]]; then
     exit 0
 fi
 
+if [[ "$1" = "d" ]]; then
+    foot -D "$(pwd)"
+
+    exit 0
+fi
+
 bash /opt/gem/gems/$TARGET $MODE || exit 1
