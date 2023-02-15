@@ -62,7 +62,7 @@ if [[ "$1" = "c" ]]; then
 fi
 
 if [[ "$1" = "d" ]]; then
-    foot -D "$(pwd)" > /dev/null &
+    foot -D "$(pwd)" 2&>1 &
 
     exit 0
 fi
