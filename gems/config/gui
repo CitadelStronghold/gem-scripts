@@ -38,7 +38,7 @@ sudo mkdir -p $HYPR_WALLPAPERS_DIR
 #if [[ ! -f "$HYPR_DEFUALT_WALLPAPER" ]]; then
 #    sudo wget -O $HYPR_DEFUALT_WALLPAPER https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
 #fi
-if [[ ! -d "$HYPR_WALLPAPERS_DIR" ]]; then
+if [[ ! -d "$HYPR_WALLPAPERS_DIR/.git" ]]; then
     sudo git clone https://github.com/Eshnek/wall.git $HYPR_WALLPAPERS_DIR
 fi
 
