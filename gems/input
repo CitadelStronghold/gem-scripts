@@ -18,6 +18,6 @@ cd $BUILD_FOLDER
 
 wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/libinput/trunk/PKGBUILD
 
-printf "prepare() {\nsed -i 's/ms2us.*25/ms2us(50/g' $(find . | grep evdev-debounce.c)\n}\n" | tee -a ./PKGBUILD
+printf "prepare() {\nsed -i 's/ms2us.*25/ms2us(50/g' \$(find . | grep evdev-debounce.c)\n}\n" | tee -a ./PKGBUILD
 
 makepkg --syncdeps --install
