@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DEPS="libinput"
+
+BUILD_FOLDER="$HOME/downloads/libinput"
+
+if [[ $1 = "r" ]]; then
+    gem pac R $DEPS
+
+    exit 0
+fi
+
+# gem pac S $DEPS
+
+rm -rf $BUILD_FOLDER
+mkdir -p $BUILD_FOLDER
+cd $BUILD_FOLDER
+
+wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/libinput/trunk/PKGBUILD
