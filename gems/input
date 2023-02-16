@@ -17,3 +17,5 @@ mkdir -p $BUILD_FOLDER
 cd $BUILD_FOLDER
 
 wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/libinput/trunk/PKGBUILD
+
+makepkg --syncdeps
