@@ -35,8 +35,11 @@ cp /opt/gem/ext/hyprland.config.default $HYPR_CONFIG
 echo "[gem] [config] [hyprpaper]"
 cp /opt/gem/ext/hyprpaper.config.default $HYPR_PAPER_CONFIG
 sudo mkdir -p $HYPR_WALLPAPERS_DIR
-if [[ ! -f "$HYPR_DEFUALT_WALLPAPER" ]]; then
-    sudo wget -O $HYPR_DEFUALT_WALLPAPER https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
+#if [[ ! -f "$HYPR_DEFUALT_WALLPAPER" ]]; then
+#    sudo wget -O $HYPR_DEFUALT_WALLPAPER https://4kwallpapers.com/images/wallpapers/valley-of-fire-state-park-road-tarmac-highway-nevada-3648x5472-1096.jpg
+#fi
+if [[ ! -d $HYPR_WALLPAPERS_DIR ]]; then
+    sudo git clone https://github.com/Eshnek/wall.git $HYPR_WALLPAPERS_DIR
 fi
 
 echo "[gem] [config] [foot]"
