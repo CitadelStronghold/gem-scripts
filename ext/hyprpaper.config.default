@@ -1,4 +1,3 @@
-preload = /opt/wall/roads/valley-of-fire-road-nevada.jpg
-preload = /opt/wall/planets/saturn_a.jpg
+# tree /opt/wall
 
-wallpaper = ,/opt/wall/planets/saturn_a.jpg
+wallpaper = ,/opt/wall/scapes/sea_a.jpg
