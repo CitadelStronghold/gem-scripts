@@ -162,9 +162,8 @@ bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
 # windowrulev2 = noanim, class:^(flameshot)$
 # windowrulev2 = float, class:^(flameshot)$
 
-bind = $mainMod, L, exec, swaylock --screenshots --effect-blur 3x5 --ring-color 2e87a1 --inside-color 122233 --separator-color 2e87a1
+bind = $mainMod, L, exec, swaylock --effect-vignette .0:.8 --screenshots --effect-blur 3x5 --ring-color 2e87a1 --inside-color 122233 --separator-color 2e87a1
 # --clock --indicator --indicator-radius 100
-# --effect-vignette .0:.9
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
