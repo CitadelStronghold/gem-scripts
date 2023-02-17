@@ -161,6 +161,8 @@ bind = $mainMod, S, exec, spotify-qt
 bind = , XF86AudioPlay, exec, playerctl play-pause
 bind = , XF86AudioPrev, exec, playerctl previous
 bind = , XF86AudioNext, exec, playerctl next
+bind = , XF86RockerUp, exec, playerctl volume +
+bind = , XF86RockerDown, exec, playerctl volume +
 
 bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
 #
