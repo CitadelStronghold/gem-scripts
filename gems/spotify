@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PACS="spotifyd playerctl"
+
 CONFIG_FOLDER="$HOME/.config/spotifyd"
 SPOTIFY_QT_FOLDER="$HOME/spotify-qt"
 
@@ -8,14 +10,14 @@ rm -rf $SPOTIFY_QT_FOLDER
 if [[ $1 = "r" ]]; then
     # ^
     sudo rm -f /usr/local/bin/spotify-qt
-    gem pac R spotifyd
+    gem pac R $PACS
     # gem pac R qt6-base qt6-svg qt6-wayland
 
     exit 0
 fi
 
 gem pac S qt6-base qt6-svg qt6-wayland
-gem pac S spotifyd
+gem pac S $PACS
 
 git clone --branch stable https://github.com/kraxarn/spotify-qt.git $SPOTIFY_QT_FOLDER
 cd $SPOTIFY_QT_FOLDER
