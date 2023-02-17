@@ -157,12 +157,14 @@ bind = $mainMod, N, togglesplit, # dwindle
 bind = $mainMod, Z, fullscreen
 # W intentionally left blank because it is often hit by accident
 
+bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
+#
 # No NVIDIA support (See gems/gui)
 # bind = $mainMod, Print, exec, hyprpicker
 # https://unix.stackexchange.com/a/523805
-# This adds imagemagick dependency:
-bind = $mainMod, Print, exec, grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | tr -d '\n' | wl-copy
-bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
+# Adds imagemagick dependency:
+# bind = $mainMod, Print, exec, grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | tr -d '\n' | wl-copy
+#
 # bind = , Print, exec, env XDG_CURRENT_DESKTOP=sway flameshot gui
 # windowrulev2 = noanim, class:^(flameshot)$
 # windowrulev2 = float, class:^(flameshot)$
