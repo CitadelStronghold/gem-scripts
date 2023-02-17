@@ -16,11 +16,3 @@ wget https://registrationcenter-download.intel.com/akdlm/irc_nas/19079/l_BaseKit
 sudo sh ./l_BaseKit_p_2023.0.0.25537.sh
 
 source /opt/intel/oneapi/setvars.sh
-
-# Mentioned in the installer:
-# libdrm2
-# libgtk-3-0
-# libglib2.0-bin
-# libnoti
-# libxcb-dri3-0
-# libgdm
