@@ -143,6 +143,7 @@ bind = $mainMod, B, exec, firefox
 bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu
 bind = $secondaryMod, V, exec, vmware
 bind = $secondaryMod, S, exec, steam
+bind = $secondaryMod, T, exec, foot -H btop
 bind = $mainMod, D, exec, discord
 bind = $mainMod, S, exec, spotify-qt
 bind = $mainMod, A, exec, pavucontrol
