@@ -145,7 +145,6 @@ bind = $secondaryMod, V, exec, vmware
 bind = $secondaryMod, S, exec, steam
 bind = $secondaryMod, T, exec, foot -H btop
 bind = $mainMod, D, exec, discord
-bind = $mainMod, S, exec, spotify-qt
 bind = $mainMod, A, exec, pavucontrol
 bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
 bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
@@ -157,6 +156,9 @@ bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, N, togglesplit, # dwindle
 bind = $mainMod, Z, fullscreen
 # W intentionally left blank because it is often hit by accident
+
+bind = $mainMod, S, exec, spotify-qt
+bind = , AudioPlay, exec, playerctl play-pause
 
 bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
 #
