@@ -80,6 +80,7 @@ meson build --prefix=/usr
 sudo ninja -C build install
 # sudo cp build/xdg-desktop-portal-hyprland /usr/bin
 
+# Does not work with NVIDIA: https://github.com/hyprwm/hyprpicker/issues/28
 echo "[gem] [hyprland] [hyprpicker]"
 git clone https://github.com/hyprwm/hyprpicker.git $HYPR_PICKER_DIR
 cd $HYPR_PICKER_DIR
