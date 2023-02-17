@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGES="grim slurp swappy wl-clipboard"
+PACKAGES="grim slurp swappy wl-clipboard imagemagick"
 
 if [[ $1 = "r" ]]; then
     gem pac R $PACKAGES

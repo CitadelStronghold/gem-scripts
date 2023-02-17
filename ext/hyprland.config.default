@@ -144,7 +144,6 @@ bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu
 bind = $secondaryMod, V, exec, vmware
 bind = $secondaryMod, S, exec, steam
 bind = $mainMod, D, exec, discord
-bind = $mainMod, Y, exec, hyprpicker
 bind = $mainMod, S, exec, spotify-qt
 bind = $mainMod, A, exec, pavucontrol
 bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
@@ -158,6 +157,8 @@ bind = $mainMod, N, togglesplit, # dwindle
 bind = $mainMod, Z, fullscreen
 # W intentionally left blank because it is often hit by accident
 
+# bind = $mainMod, Print, exec, hyprpicker # No NVIDIA support (See gems/gui)
+bind = $mainMod, Print, exec, grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- # https://unix.stackexchange.com/a/523805
 bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
 # bind = , Print, exec, env XDG_CURRENT_DESKTOP=sway flameshot gui
 # windowrulev2 = noanim, class:^(flameshot)$
