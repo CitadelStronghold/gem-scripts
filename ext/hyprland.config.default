@@ -133,7 +133,7 @@ $mainMod = SUPER
 $secondaryMod = SUPER_ALT
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for mor
-bind = $mainMod, C, killactive,
+bind = $mainMod, C, killactive
 bind = $mainMod, Q, exit
 bind = $mainMod, T, exec, foot
 bind = $mainMod, E, exec, foot nnn
