@@ -160,7 +160,7 @@ bind = $mainMod, Z, fullscreen
 # No NVIDIA support (See gems/gui)
 # bind = $mainMod, Print, exec, hyprpicker
 # https://unix.stackexchange.com/a/523805
-bind = $mainMod, Print, exec, grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
+bind = $mainMod, Print, exec, grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | tr -d '\n' | wl-copy
 bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
 # bind = , Print, exec, env XDG_CURRENT_DESKTOP=sway flameshot gui
 # windowrulev2 = noanim, class:^(flameshot)$
