@@ -158,7 +158,9 @@ bind = $mainMod, Z, fullscreen
 # W intentionally left blank because it is often hit by accident
 
 bind = $mainMod, S, exec, spotify-qt
-bind = , AudioPlay, exec, playerctl play-pause
+bind = , XF86AudioPlay, exec, playerctl play-pause
+bind = , XF86AudioPrev, exec, playerctl previous
+bind = , XF86AudioNext, exec, playerctl next
 
 bind = , Print, exec, grim -g "$(slurp -d)" - | swappy -f -
 #
