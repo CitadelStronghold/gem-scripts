@@ -1,16 +1,16 @@
 #!/bin/bash
 
-DEPS="nvidia-dkms libva qt6-wayland qt6ct"
+DEPS="nvidia-open-dkms libva qt6-wayland qt6ct"
 
 MOD_PROBE_DIR="/etc/modprobe.d"
 
 if [[ $1 = "r" ]]; then
-    gem pac R nvidia-dkms
+    gem pac R $DEPS
 
     exit 0
 fi
 
-gem pac S nvidia-dkms
+gem pac S $DEPS
 
 mkdir -p $MOD_PROBE_DIR
 printf "options nvidia-drm modeset=1\n" | sudo tee $MOD_PROBE_DIR/nvidia.conf
