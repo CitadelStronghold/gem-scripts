@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS="clang lldb"
+DEPS="clang lldb llvm"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
