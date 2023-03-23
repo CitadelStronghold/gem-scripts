@@ -42,6 +42,8 @@ echo "setopt NULL_GLOB" | tee -a ~/.zshrc # Less reporting
 
 echo "alias ls=exa" | tee -a ~/.zshrc # ls is exa
 
+echo "export DEBUGINFOD_URLS=\"https://debuginfod.archlinux.org\"" | tee -a ~/.zshrc # valgrind will work
+
 # Background Color
 echo "sed -i \"/-g POWERLEVEL9K_BACKGROUND=/c\  typeset -g POWERLEVEL9K_BACKGROUND=16\" $HOME/.p10k.zsh" | tee -a ~/.zshrc
 
