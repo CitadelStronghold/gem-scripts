@@ -144,7 +144,7 @@ bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu --disable-
 bind = $secondaryMod, V, exec, vmware
 bind = $secondaryMod, S, exec, steam
 bind = $secondaryMod, T, exec, foot -H btop
-bind = $tertiaryMod, S, exec, signal-desktop --disable-gpu --disable-gpu-compositing
+bind = $tertiaryMod, S, exec, signal-desktop --ozone-platform=wayland --disable-gpu --disable-gpu-compositing
 bind = $mainMod, D, exec, discord
 bind = $mainMod, A, exec, pavucontrol
 bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
