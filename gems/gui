@@ -82,20 +82,20 @@ sudo chmod u+s /bin/ydotool /bin/ydotoold # Allow non-root users to use it
 ## sudo cp build/xdg-desktop-portal-hyprland /usr/bin
 
 # Does not work with NVIDIA: https://github.com/hyprwm/hyprpicker/issues/28
-echo "[gem] [hyprland] [hyprpicker]"
-git clone https://github.com/hyprwm/hyprpicker.git $HYPR_PICKER_DIR
-cd $HYPR_PICKER_DIR
-make all
-sudo cp ./build/hyprpicker /usr/local/bin
+#echo "[gem] [hyprland] [hyprpicker]"
+#git clone https://github.com/hyprwm/hyprpicker.git $HYPR_PICKER_DIR
+#cd $HYPR_PICKER_DIR
+#make all
+#sudo cp ./build/hyprpicker /usr/local/bin
 
-echo "[gem] [hyprland] [rofi]"
-git clone https://github.com/lbonn/rofi $ROFI_DIR
-cd $ROFI_DIR
-meson setup build
-sudo ninja -C build install
+#echo "[gem] [hyprland] [rofi]"
+#git clone https://github.com/lbonn/rofi $ROFI_DIR
+#cd $ROFI_DIR
+#meson setup build
+#sudo ninja -C build install
 
-echo "[gem] [hyprland] [rofi] [rofimoji]"
-gem pac S rofimoji
+#echo "[gem] [hyprland] [rofi] [rofimoji]"
+#gem pac S rofimoji
 
 gem aur S swaylock-effects
 
