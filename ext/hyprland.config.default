@@ -130,6 +130,7 @@ device:epic mouse V1 {
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 $mainMod = SUPER
 $secondaryMod = SUPER_ALT
+$tertiaryMod = SUPER_SHIFT
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for mor
 bind = $mainMod, C, killactive
@@ -143,6 +144,7 @@ bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu
 bind = $secondaryMod, V, exec, vmware
 bind = $secondaryMod, S, exec, steam
 bind = $secondaryMod, T, exec, foot -H btop
+bind = $tertiaryMod, S, exec, signal-desktop --disable-gpu
 bind = $mainMod, D, exec, discord
 bind = $mainMod, A, exec, pavucontrol
 bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
