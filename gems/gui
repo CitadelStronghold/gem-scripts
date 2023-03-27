@@ -36,12 +36,12 @@ fi
 
 gem pac S $DEPS
 
-# sudo rm -rf $HYPR_DIR
-# git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
-# cd $HYPR_DIR
-## sed -i 's/glFlush();/glFinish();/g' ./subprojects/wlroots/render/gles2/renderer.c
-# sudo make install
-paru -S hyprland-nvidia-git
+sudo rm -rf $HYPR_DIR
+git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
+cd $HYPR_DIR
+# sed -i 's/glFlush();/glFinish();/g' ./subprojects/wlroots/render/gles2/renderer.c
+sudo make install
+# paru -S hyprland-nvidia-git
 
 sudo mkdir -p $WAYLAND_SESSIONS_DIR
 sudo cp /opt/gem/ext/hyprland.desktop $WAYLAND_SESSIONS_DIR
