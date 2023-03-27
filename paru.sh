@@ -3,7 +3,7 @@
 ARGS="${@:2}"
 
 if [[ "$1" = "S" ]]; then
-    paru -S --removemake $ARGS
+    paru -S --needed --removemake $ARGS
 
     exit 0
 fi
