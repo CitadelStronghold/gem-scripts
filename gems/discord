@@ -5,12 +5,12 @@ CONFIG="$CONFIG_FOLDER/discord-flags.conf"
 
 if [[ $1 = "r" ]]; then
     rm -f $CONFIG
-    gem aur R discord_arch_electron
+    gem pac R discord
 
     exit 0
 fi
 
-gem aur S discord_arch_electron
+gem pac S discord
 
 mkdir -p $CONFIG_FOLDER
 echo "--ozone-platform=wayland" | tee $CONFIG
