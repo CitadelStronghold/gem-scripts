@@ -4,10 +4,14 @@ if [[ $1 = "r" ]]; then
     systemctl disable gdm
     gem pac R gdm
     echo "[gem] [disable] [service] gdm"
-    
+
     exit 0
 fi
 
 gem pac S gdm
 systemctl enable gdm
 echo "[gem] [enable] [service] gdm"
+
+# Disable automatic hibernation
+# https://wiki.archlinux.org/title/GDM#GDM_auto-suspend_.28GNOME_3.28.29
+sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
