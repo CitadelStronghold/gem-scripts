@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DEPS="monero-gui"
+
+if [[ $1 = "r" ]]; then
+    gem pac R $DEPS
+
+    exit 0
+fi
+
+gem pac S $DEPS
