@@ -7,7 +7,7 @@ cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput xcb-util-curso
 HYPR_DIR="$HOME/hypr"
 HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
 HYPR_WAYBAR_DIR="$HYPR_DIR/waybar"
-HYPR_VERSION="0155b85"
+HYPR_VERSION="fd3e6a3"
 # b0d86a7 no cursor
 # a22e117 no cursor
 
