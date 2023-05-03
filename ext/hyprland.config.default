@@ -154,7 +154,7 @@ bind = $secondaryMod, V, exec, bash ~/.vmware/vmware.sh
 bind = $secondaryMod, S, exec, steam
 bind = $secondaryMod, T, exec, foot -H btop
 bind = $tertiaryMod, S, exec, signal-desktop --disable-gpu --disable-gpu-compositing
-bind = $mainMod, D, exec, discord
+bind = $mainMod, D, exec, discord --disable-gpu --disable-gpu-compositing
 bind = $mainMod, M, exec, monero-wallet-gui
 bind = $mainMod, A, exec, pavucontrol
 bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
