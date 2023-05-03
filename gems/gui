@@ -8,8 +8,6 @@ HYPR_DIR="$HOME/hypr"
 HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
 HYPR_WAYBAR_DIR="$HYPR_DIR/waybar"
 HYPR_VERSION="fd3e6a3"
-# b0d86a7 no cursor
-# a22e117 no cursor
 
 HYPR_XDG_DIR="$HYPR_DIR/xdg"
 
