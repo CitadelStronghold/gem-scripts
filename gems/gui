@@ -7,6 +7,7 @@ cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput xcb-util-curso
 HYPR_DIR="$HOME/hypr"
 HYPR_PAPER_DIR="$HYPR_DIR/hyprpaper"
 HYPR_WAYBAR_DIR="$HYPR_DIR/waybar"
+HYPR_VERSION="3ade6c4"
 
 HYPR_XDG_DIR="$HYPR_DIR/xdg"
 
@@ -39,6 +40,7 @@ gem pac S $DEPS
 sudo rm -rf $HYPR_DIR
 git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 cd $HYPR_DIR
+git checkout "$HYPR_VERSION"
 # sed -i 's/glFlush();/glFinish();/g' ./subprojects/wlroots/render/gles2/renderer.c
 sudo make install
 # paru -S hyprland-nvidia-git
