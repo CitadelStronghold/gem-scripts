@@ -12,6 +12,12 @@ monitor=HDMI-A-1,1920x1080@60,0x1715,1
 
 exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
+env = XDG_SESSION_TYPE,wayland
+env = QT_QPA_PLATFORM,"wayland;xcb"
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+env = WLR_NO_HARDWARE_CURSORS,1
+
 # See `remapper`
 exec-once=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once=input-remapper-control --command autoload
