@@ -38,9 +38,10 @@ fi
 gem pac S $DEPS
 
 sudo rm -rf $HYPR_DIR
-git clone --recursive https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
+git clone https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 cd $HYPR_DIR
 git checkout "$HYPR_VERSION"
+git submodule update --init --recursive
 # sed -i 's/glFlush();/glFinish();/g' ./subprojects/wlroots/render/gles2/renderer.c
 sudo make install
 # paru -S hyprland-nvidia-git
