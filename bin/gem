@@ -56,6 +56,8 @@ if [[ "$1" = "c" ]]; then
         (sudo $GEM_EDITOR /etc/default/grub) && (gem s config/grub)
     elif [[ "$2" = "keyd" ]]; then
         sudo $GEM_EDITOR /etc/keyd/default.conf
+    else
+        echo "[config] [unknown] $2"
     fi
 
     exit 0
