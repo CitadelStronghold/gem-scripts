@@ -54,8 +54,8 @@ if [[ "$1" = "c" ]]; then
         (sudo $GEM_EDITOR /etc/mkinitcpio.conf) && (sudo mkinitcpio -P)
     elif [[ "$2" = "grub" ]]; then
         (sudo $GEM_EDITOR /etc/default/grub) && (gem s config/grub)
-    elif [[ "$2" = "spotify" ]]; then
-        $GEM_EDITOR ~/.config/spotifyd/spotifyd.conf
+    elif [[ "$2" = "keyd" ]]; then
+        sudo $GEM_EDITOR /etc/keyd/default.conf
     fi
 
     exit 0
