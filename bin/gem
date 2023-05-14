@@ -57,7 +57,7 @@ if [[ "$1" = "c" ]]; then
     elif [[ "$2" = "keyd" ]]; then
         sudo $GEM_EDITOR /etc/keyd/default.conf
     else
-        echo "[config] [unknown] $2"
+        echo "[config] Unknown: $2"
     fi
 
     exit 0
