@@ -2,6 +2,9 @@
 
 DEPS="keyd"
 
+REMAPPER_CONFIG_EXT_FOLDER="/opt/gem/ext/keyd.conf"
+REMAPPER_CONFIG_PATH="/etc/keyd/default.conf"
+
 if [[ $1 = "r" ]]; then
     gem aur R $DEPS
 
@@ -13,20 +16,4 @@ gem aur S $DEPS
 sudo systemctl enable keyd
 sudo systemctl start keyd
 
-#REMAPPER_CONFIG_EXT_FOLDER="/opt/gem/ext/input-remapper"
-#REMAPPER_CONFIG_FOLDER="$HOME/.config"
-
-#if [[ $1 = "r" ]]; then
-#    gem pac R polkit-gnome
-#    gem aur R input-remapper-git
-
-#    exit 0
-#fi
-
-#gem pac S polkit-gnome
-#gem aur S input-remapper-git
-
-#sudo systemctl enable input-remapper
-
-#mkdir -p $REMAPPER_CONFIG_FOLDER
-#cp -rf $REMAPPER_CONFIG_EXT_FOLDER $REMAPPER_CONFIG_FOLDER
+cp -rf $REMAPPER_CONFIG_EXT_FOLDER $REMAPPER_CONFIG_FOLDER
