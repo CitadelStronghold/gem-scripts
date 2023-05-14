@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS_AUR="keyd"
+DEPS="keyd"
 
 if [[ $1 = "r" ]]; then
     gem aur R $DEPS
