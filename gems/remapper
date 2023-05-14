@@ -15,6 +15,6 @@ gem aur S $DEPS
 
 sudo systemctl enable keyd
 
-cp -rf $REMAPPER_CONFIG_EXT_FOLDER $REMAPPER_CONFIG_FOLDER
+cp -f $REMAPPER_CONFIG_EXT_FOLDER $REMAPPER_CONFIG_FOLDER
 
 sudo systemctl restart keyd
