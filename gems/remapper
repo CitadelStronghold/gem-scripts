@@ -10,6 +10,9 @@ fi
 
 gem aur S $DEPS
 
+sudo systemctl enable keyd
+sudo systemctl start keyd
+
 #REMAPPER_CONFIG_EXT_FOLDER="/opt/gem/ext/input-remapper"
 #REMAPPER_CONFIG_FOLDER="$HOME/.config"
 
