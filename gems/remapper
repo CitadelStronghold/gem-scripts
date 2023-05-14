@@ -1,19 +1,29 @@
 #!/bin/bash
 
-REMAPPER_CONFIG_EXT_FOLDER="/opt/gem/ext/input-remapper"
-REMAPPER_CONFIG_FOLDER="$HOME/.config"
+DEPS="keyd"
 
 if [[ $1 = "r" ]]; then
-    gem pac R polkit-gnome
-    gem aur R input-remapper-git
+    gem aur R $DEPS
 
     exit 0
 fi
 
-gem pac S polkit-gnome
-gem aur S input-remapper-git
+gem aur S $DEPS
 
-sudo systemctl enable input-remapper
+#REMAPPER_CONFIG_EXT_FOLDER="/opt/gem/ext/input-remapper"
+#REMAPPER_CONFIG_FOLDER="$HOME/.config"
 
-mkdir -p $REMAPPER_CONFIG_FOLDER
-cp -rf $REMAPPER_CONFIG_EXT_FOLDER $REMAPPER_CONFIG_FOLDER
+#if [[ $1 = "r" ]]; then
+#    gem pac R polkit-gnome
+#    gem aur R input-remapper-git
+
+#    exit 0
+#fi
+
+#gem pac S polkit-gnome
+#gem aur S input-remapper-git
+
+#sudo systemctl enable input-remapper
+
+#mkdir -p $REMAPPER_CONFIG_FOLDER
+#cp -rf $REMAPPER_CONFIG_EXT_FOLDER $REMAPPER_CONFIG_FOLDER
