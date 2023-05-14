@@ -1,21 +1,31 @@
 #!/bin/bash
 
-DEPS="libinput"
-
-BUILD_FOLDER="$HOME/downloads/libinput"
+DEPS_AUR="keyd"
 
 if [[ $1 = "r" ]]; then
-    gem pac R $DEPS
+    gem aur R $DEPS
 
     exit 0
 fi
 
-rm -rf $BUILD_FOLDER
-mkdir -p $BUILD_FOLDER
-cd $BUILD_FOLDER
+gem aur S $DEPS
 
-wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/libinput/trunk/PKGBUILD
+#DEPS="libinput"
 
-printf "prepare() {\nsed -i 's/ms2us.*25/ms2us(50/g' \$(find . | grep evdev-debounce.c)\n}\n" | tee -a ./PKGBUILD
+#BUILD_FOLDER="$HOME/downloads/libinput"
 
-makepkg --syncdeps --install
+#if [[ $1 = "r" ]]; then
+#    gem pac R $DEPS
+
+#    exit 0
+#fi
+
+#rm -rf $BUILD_FOLDER
+#mkdir -p $BUILD_FOLDER
+#cd $BUILD_FOLDER
+
+#wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/libinput/trunk/PKGBUILD
+
+#printf "prepare() {\nsed -i 's/ms2us.*25/ms2us(50/g' \$(find . | grep evdev-debounce.c)\n}\n" | tee -a ./PKGBUILD
+
+#makepkg --syncdeps --install
