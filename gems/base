@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS="git neovim helix base-devel man-db downgrade"
+DEPS="git neovim helix base-devel man-db downgrade xeyes"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
