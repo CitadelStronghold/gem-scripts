@@ -46,10 +46,6 @@ if [[ "$1" = "c" ]]; then
         $GEM_EDITOR ~/.config/hypr/hyprpaper.conf
     elif [[ "$2" = "foot" ]]; then
         $GEM_EDITOR ~/.config/foot/foot.ini
-    elif [[ "$2" = "rofi" ]]; then
-        $GEM_EDITOR ~/.config/rofi/config.rasi
-    elif [[ "$2" = "rofimoji" ]]; then
-        $GEM_EDITOR ~/.config/rofimoji.rc
     elif [[ "$2" = "init" ]]; then
         (sudo $GEM_EDITOR /etc/mkinitcpio.conf) && (sudo mkinitcpio -P)
     elif [[ "$2" = "grub" ]]; then

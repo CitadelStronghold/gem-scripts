@@ -13,8 +13,6 @@ HYPR_XDG_DIR="$HYPR_DIR/xdg"
 
 HYPR_PICKER_DIR="$HYPR_DIR/picker"
 
-ROFI_DIR="$HYPR_DIR/rofi"
-
 WAYLAND_SESSIONS_DIR="/usr/share/wayland-sessions"
 X_SESSIONS_DIR="/usr/share/xsessions"
 
@@ -27,7 +25,6 @@ if [[ $1 = "r" ]]; then
     gem pac R foot
     # gem pac R otf-font-awesome gtk-mm
     gem pac R nnn
-    gem pac R rofi
     gem pac R ydotool
     gem aur R swaylock-effects
     remove_hypr_dir
@@ -89,15 +86,6 @@ sudo chmod u+s /bin/ydotool /bin/ydotoold # Allow non-root users to use it
 #cd $HYPR_PICKER_DIR
 #make all
 #sudo cp ./build/hyprpicker /usr/local/bin
-
-#echo "[gem] [hyprland] [rofi]"
-#git clone https://github.com/lbonn/rofi $ROFI_DIR
-#cd $ROFI_DIR
-#meson setup build
-#sudo ninja -C build install
-
-#echo "[gem] [hyprland] [rofi] [rofimoji]"
-#gem pac S rofimoji
 
 gem aur S swaylock-effects
 

@@ -10,11 +10,6 @@ HYPR_WALLPAPERS_DIR="/opt/wall"
 FOOT_CONFIG_DIR="$CONFIG_DIR/foot"
 FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
 
-ROFI_CONFIG_DIR="$HOME/.config/rofi"
-ROFI_CONFIG="$ROFI_CONFIG_DIR/config.rasi"
-
-ROFIMOJI_CONFIG="$HOME/.config/rofimoji.rc"
-
 ##
 
 if [[ $1 = "r" ]]; then
@@ -42,13 +37,6 @@ echo "[gem] [config] [foot]"
 mkdir -p $FOOT_CONFIG_DIR
 cp -f /opt/gem/ext/foot.ini $FOOT_CONFIG
 
-echo "[gem] [config] [rofi]"
-mkdir -p $ROFI_CONFIG_DIR
-printf '@theme "gruvbox-dark-hard"\n' > $ROFI_CONFIG
-
 echo "[gem] [config] [electron-flags]"
 echo '--ozone-platform-hint=auto' | tee $HOME/.config/electron-flags.conf
 echo '--ozone-platform=wayland' | tee $HOME/.config/electron17-flags.conf
-
-echo "[gem] [config] [rofimoji]"
-printf 'action = copy\nclipboarder = wl-copy\n' > $ROFIMOJI_CONFIG

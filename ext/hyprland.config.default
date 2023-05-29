@@ -158,8 +158,6 @@ bind = $mainMod, O, exec, QT_QPA_PLATFORM=wayland obs # xcb
 bind = $mainMod, J, exec, ~/.joplin/Joplin.AppImage --ozone-platform=wayland
 bind = $mainMod, V, exec, ~/.bitwarden/BitWarden.AppImage --ozone-platform=wayland
 bind = $mainMod, F, togglefloating
-# bind = $mainMod, R, exec, rofi -font "Iosevka 12" -show drun
-# bind = $mainMod, G, exec, rofi -font "Iosevka 12" -modi "emoji:/usr/bin/rofimoji" -show emoji
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, N, togglesplit, # dwindle
 bind = $mainMod, Z, fullscreen
