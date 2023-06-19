@@ -9,3 +9,5 @@ if [[ $1 = "r" ]]; then
 fi
 
 gem pac S $DEPS
+
+echo "v4l2loopback" | sudo tee /etc/modules-load.d/obs.conf
