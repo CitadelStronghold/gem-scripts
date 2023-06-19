@@ -147,7 +147,7 @@ bind = $mainMod, X, exec, code
 # bind = $mainMod, B, exec, google-chrome-stable --disable-gpu --disable-gpu-compositing # --force-device-scale-factor=1.5
 bind = $mainMod, B, exec, firefox
 bind = $secondaryMod, B, exec, ~/brisqi/Brisqi.AppImage --disable-gpu --disable-gpu-compositing
-bind = $secondaryMod, V, exec, foot -H bash ~/.vmware/vmware.sh
+bind = $secondaryMod, V, exec, foot bash ~/.vmware/vmware.sh
 bind = $secondaryMod, S, exec, steam
 bind = $secondaryMod, T, exec, foot -H btop
 bind = $tertiaryMod, S, exec, signal-desktop --disable-gpu --disable-gpu-compositing
