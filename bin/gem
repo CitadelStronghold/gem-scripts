@@ -30,7 +30,7 @@ if [[ "$1" = "tree" ]]; then
     exit 0
 fi
 
-if [[ "$1" = "shutdown" ]]; then
+if [[ "$1" = "shutdown" || "$1" = "down" ]]; then
     sudo shutdown -h --no-wall now
     exit 0
 fi
