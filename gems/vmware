@@ -12,4 +12,4 @@ gem aur S vmware-workstation
 sudo modprobe -a vmw_vmci vmmon
 
 mkdir -p $VMWARE_FOLDER
-printf "#!/bin/bash\n\nsudo systemctl start vmware-networks\nsudo systemctl start vmware-usbarbitrator.service\nvmware\nsudo systemctl stop vmware-networks\nsudo systemctl stop vmware-usbarbitrator.service\n" | tee $VMWARE_FOLDER/vmware.sh
+printf "#!/bin/bash\n\nsudo systemctl start vmware-networks\nsudo systemctl start vmware-usbarbitrator\nvmware\nsudo systemctl stop vmware-networks\nsudo systemctl stop vmware-usbarbitrator\n" | tee $VMWARE_FOLDER/vmware.sh
