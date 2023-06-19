@@ -34,7 +34,7 @@ fi
 
 gem pac S $DEPS
 
-# sudo rm -rf $HYPR_DIR
+sudo rm -rf $HYPR_DIR
 # git clone https://github.com/hyprwm/Hyprland $HYPR_DIR || exit 1
 # cd $HYPR_DIR
 # git checkout "$HYPR_VERSION" || exit 1
