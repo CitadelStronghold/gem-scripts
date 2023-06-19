@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEPS="obs-studio"
+DEPS="obs-studio v4l2loopback-dkms"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
