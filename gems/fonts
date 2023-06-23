@@ -21,6 +21,8 @@ install_font() {
 
         cd $FONTS_DIR
         sudo unzip -o $FONT_ZIP_NAME -d $FONTS_INSTALL_DIR
+
+        echo "[fc-cache]"
         fc-cache --force
 
         rm -rf $FONT_ZIP
