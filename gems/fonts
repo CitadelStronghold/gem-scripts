@@ -1,33 +1,6 @@
 #!/bin/bash
 
-FONTS_INSTALL_DIR="/usr/share/fonts"
-FONTS_DIR="$HOME/fonts"
+gem pac S ttc-iosevka ttf-fira-code
 
-FONT_ZIP_NAME="font.zip"
-FONT_ZIP="$FONTS_DIR/$FONT_ZIP_NAME"
-
-IOSEVKA_TTC="iosevka.ttc"
-IOSEVKA_GLYPHS_TTC="Iosevka Term Nerd Font Complete Bold.ttf"
-
-install_font() {
-    if [[ ! -f "$FONTS_INSTALL_DIR/$1" ]]; then
-        mkdir -p $FONTS_DIR
-
-        wget -O $FONT_ZIP $2
-
-        cd $FONTS_DIR
-        sudo unzip -o $FONT_ZIP_NAME -d $FONTS_INSTALL_DIR
-
-        echo "[fc-cache]"
-        fc-cache --force
-
-        rm -rf $FONT_ZIP
-    fi
-}
-
-# Use 'fc-list' command
-
-echo "[gem] [fonts] [iosevka]"
-install_font "$IOSEVKA_TTC" https://github.com/be5invis/Iosevka/releases/download/v17.1.0/super-ttc-iosevka-17.1.0.zip
-echo "[gem] [fonts] [iosevka glyphs]"
-install_font "$IOSEVKA_GLYPHS_TTC" https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Iosevka.zip
+echo "[fc-cache]"
+fc-cache --force
