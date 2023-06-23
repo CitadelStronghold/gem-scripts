@@ -1,9 +1,3 @@
 #!/bin/bash
 
-if [[ $1 = "r" ]]; then
-    gem pac R veracrypt
-
-    exit 0
-fi
-
 gem pac S veracrypt

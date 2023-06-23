@@ -3,12 +3,6 @@
 BITWARDEN_FOLDER="$HOME/.bitwarden"
 BITWARDEN_APPIMAGE_NAME="BitWarden.AppImage"
 
-if [[ $1 = "r" ]]; then
-    rm -rf $BITWARDEN_FOLDER
-
-    exit 0
-fi
-
 cd ~/downloads
 curl -L 'https://vault.bitwarden.com/download/?app=desktop&platform=linux' --output $BITWARDEN_APPIMAGE_NAME
 

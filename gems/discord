@@ -3,13 +3,6 @@
 CONFIG_FOLDER="$HOME/.config"
 CONFIG="$CONFIG_FOLDER/discord-flags.conf"
 
-if [[ $1 = "r" ]]; then
-    rm -f $CONFIG
-    gem pac R discord
-
-    exit 0
-fi
-
 gem pac S discord
 
 mkdir -p $CONFIG_FOLDER

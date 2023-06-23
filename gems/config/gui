@@ -12,12 +12,6 @@ FOOT_CONFIG="$FOOT_CONFIG_DIR/foot.ini"
 
 ##
 
-if [[ $1 = "r" ]]; then
-    exit 0
-fi
-
-##
-
 mkdir -p $CONFIG_DIR
 
 ##

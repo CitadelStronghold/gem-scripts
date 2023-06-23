@@ -1,11 +1,5 @@
 #!/bin/bash
 
-DEPS="rust"
-
-if [[ $1 = "r" ]]; then
-    gem pac R $DEPS
-
-    exit 0
-fi
+DEPS="rust cargo"
 
 gem pac S $DEPS

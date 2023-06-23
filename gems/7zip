@@ -1,9 +1,3 @@
 #!/bin/bash
 
-if [[ $1 = "r" ]]; then
-    gem aur R 7-zip
-
-    exit 0
-fi
-
 gem aur S 7-zip

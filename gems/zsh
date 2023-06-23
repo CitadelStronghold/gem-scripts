@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [[ $1 = "r" ]]; then
-    gem pac R zsh exa
-
-    exit 0
-fi
-
 gem pac S zsh exa
 
 gem aur S zsh-theme-powerlevel10k-git

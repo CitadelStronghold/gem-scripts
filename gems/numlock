@@ -1,9 +1,3 @@
 #!/bin/bash
 
-if [[ $1 = "r" ]]; then
-    gem aur R mkinitcpio-numlock
-
-    exit 0
-fi
-
 gem aur S mkinitcpio-numlock

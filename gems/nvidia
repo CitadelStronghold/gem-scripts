@@ -4,12 +4,6 @@ DEPS="nvidia-open-dkms libva qt6-wayland qt6ct"
 
 MOD_PROBE_DIR="/etc/modprobe.d"
 
-if [[ $1 = "r" ]]; then
-    gem pac R $DEPS
-
-    exit 0
-fi
-
 gem pac S $DEPS
 
 mkdir -p $MOD_PROBE_DIR

@@ -4,12 +4,6 @@ DEPS="libinput"
 
 BUILD_FOLDER="$HOME/downloads/libinput"
 
-if [[ $1 = "r" ]]; then
-    gem pac R $DEPS
-
-    exit 0
-fi
-
 rm -rf $BUILD_FOLDER
 mkdir -p $BUILD_FOLDER
 cd $BUILD_FOLDER

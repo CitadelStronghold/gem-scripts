@@ -1,9 +1,3 @@
 #!/bin/bash
 
-if [[ $1 = "r" ]]; then
-    rm -r $HOME/.joplin
-
-    exit 0
-fi
-
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash

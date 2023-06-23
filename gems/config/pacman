@@ -1,18 +1,16 @@
 #!/bin/bash
 
-if [[ $1 = "r" ]]; then
-    sudo sed -i "/ParallelDownloads/s/^/#/g" /etc/pacman.conf
-    echo "[gem] [disable] ParallelDownloads in /etc/pacman.conf"
-
-    sudo systemctl stop paccache.timer
-    sudo systemctl disable paccache.timer
-    sudo systemctl status paccache.timer
-    echo "[gem] [disable] [service] paccache.timer"
-
-    gem pac R pacman-contrib
-
-    exit 0
-fi
+# How to undo these changes programmatically:
+#if [[ $1 = "r" ]]; then
+#    sudo sed -i "/ParallelDownloads/s/^/#/g" /etc/pacman.conf
+#    echo "[gem] [disable] ParallelDownloads in /etc/pacman.conf"
+#    sudo systemctl stop paccache.timer
+#    sudo systemctl disable paccache.timer
+#    sudo systemctl status paccache.timer
+#    echo "[gem] [disable] [service] paccache.timer"
+#    gem pac R pacman-contrib
+#    exit 0
+#fi
 
 echo "[gem] [enable] ParallelDownloads in /etc/pacman.conf"
 sudo sed -i "/ParallelDownloads/s/^#//g" /etc/pacman.conf

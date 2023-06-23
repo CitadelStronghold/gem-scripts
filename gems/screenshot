@@ -2,10 +2,4 @@
 
 PACKAGES="grim slurp swappy wl-clipboard"
 
-if [[ $1 = "r" ]]; then
-    gem pac R $PACKAGES
-
-    exit 0
-fi
-
 gem pac S $PACKAGES

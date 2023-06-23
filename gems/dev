@@ -6,14 +6,6 @@ DEPS_AUR="downgrade xeyes"
 WORK_FOLDER="$HOME/work"
 PARU_FOLDER="$HOME/downloads/paru"
 
-if [[ $1 = "r" ]]; then
-    gem pac R $DEPS
-    gem aur R $DEPS_AUR
-    gem pac R paru
-
-    exit 0
-fi
-
 gem pac S $DEPS
 
 mkdir -p $WORK_FOLDER

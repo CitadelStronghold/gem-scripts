@@ -5,12 +5,6 @@ DEPS="keyd"
 REMAPPER_CONFIG_EXT_FOLDER="/opt/gem/ext/keyd.conf"
 REMAPPER_CONFIG_PATH="/etc/keyd/default.conf"
 
-if [[ $1 = "r" ]]; then
-    gem aur R $DEPS
-
-    exit 0
-fi
-
 gem aur S $DEPS
 
 sudo systemctl enable keyd

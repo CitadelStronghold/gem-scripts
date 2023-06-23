@@ -15,22 +15,6 @@ HYPR_PICKER_DIR="$HYPR_DIR/picker"
 WAYLAND_SESSIONS_DIR="/usr/share/wayland-sessions"
 X_SESSIONS_DIR="/usr/share/xsessions"
 
-remove_hypr_dir() {
-    rm -rf $HYPR_DIR
-}
-
-if [[ $1 = "r" ]]; then
-    gem pac R $DEPS
-    gem pac R foot
-    # gem pac R otf-font-awesome gtk-mm
-    gem pac R nnn
-    gem pac R ydotool
-    gem aur R swaylock-effects
-    remove_hypr_dir
-
-    exit 0
-fi
-
 gem pac S $DEPS
 
 sudo rm -rf $HYPR_DIR

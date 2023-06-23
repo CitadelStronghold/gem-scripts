@@ -8,13 +8,6 @@ CARDS_FOLDER="$BRISQI_APP_FOLDER/cards"
 
 rm -rf $BRISQI_FOLDER
 
-if [[ $1 = "r" ]]; then
-    # ^
-    gem pac R $DEPS
-
-    exit 0
-fi
-
 gem pac S $DEPS
 
 cd ~/downloads

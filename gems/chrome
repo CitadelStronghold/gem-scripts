@@ -3,13 +3,6 @@
 CONFIG_FOLDER="$HOME/.config"
 CONFIG="$CONFIG_FOLDER/chrome-flags.conf"
 
-if [[ $1 = "r" ]]; then
-    rm -f $CONFIG
-    gem aur R google-chrome
-
-    exit 0
-fi
-
 gem aur S google-chrome
 
 mkdir -p $CONFIG_FOLDER

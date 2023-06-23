@@ -1,11 +1,4 @@
 #!/bin/bash
 
-if [[ $1 = "r" ]]; then
-    gem aur R cbonsai
-    gem pac R neofetch
-
-    exit 0
-fi
-
 gem aur S cbonsai
 gem pac S neofetch

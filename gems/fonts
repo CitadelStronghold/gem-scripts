@@ -9,10 +9,6 @@ FONT_ZIP="$FONTS_DIR/$FONT_ZIP_NAME"
 IOSEVKA_TTC="iosevka.ttc"
 IOSEVKA_GLYPHS_TTC="Iosevka Term Nerd Font Complete Bold.ttf"
 
-if [[ $1 = "r" ]]; then
-    exit 0
-fi
-
 install_font() {
     if [[ ! -f "$FONTS_INSTALL_DIR/$1" ]]; then
         mkdir -p $FONTS_DIR

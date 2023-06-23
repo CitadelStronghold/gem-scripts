@@ -4,10 +4,6 @@
 
 WORKING_FOLDER="$HOME/downloads/vtune"
 
-if [[ $1 = "r" ]]; then
-    exit 0
-fi
-
 rm -rf $WORKING_FOLDER
 mkdir -p $WORKING_FOLDER
 cd $WORKING_FOLDER
