@@ -1,12 +1,14 @@
 #!/bin/bash
 
 DEPS="git neovim helix which tree ninja cmake make wget unzip fuse2 base-devel cargo"
+DEPS_AUR="downgrade xeyes"
 
 WORK_FOLDER="$HOME/work"
 PARU_FOLDER="$HOME/downloads/paru"
 
 if [[ $1 = "r" ]]; then
     gem pac R $DEPS
+    gem aur R $DEPS_AUR
     gem pac R paru
 
     exit 0
@@ -23,3 +25,5 @@ makepkg -si
 cd $HOME
 rm -rf $PARU_FOLDER
 paru
+
+gem aur S $DEPS_AUR
