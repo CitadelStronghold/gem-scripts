@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEPS="git neovim helix which tree ninja cmake make wget unzip fuse2 base-devel cargo jq"
-DEPS_AUR="downgrade xeyes"
+DEPS="git neovim helix which tree ninja cmake make wget unzip fuse2 base-devel cargo jq xorg-xeyes"
+DEPS_AUR="downgrade"
 
 WORK_FOLDER="$HOME/work"
 PARU_FOLDER="$HOME/downloads/paru"
