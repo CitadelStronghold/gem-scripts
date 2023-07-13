@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DEPS="zathura zathura-pdf-mupdf"
+DEPS="zathura zathura-pdf-mupdf img2pdf"
 
 gem pac S $DEPS
