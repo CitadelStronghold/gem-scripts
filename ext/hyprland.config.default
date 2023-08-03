@@ -83,7 +83,7 @@ decoration {
     multisample_edges = true
 
     blur {
-        blur = yes
+        enabled = true
         size = 6
         passes = 2
     }
