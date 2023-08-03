@@ -81,14 +81,17 @@ decoration {
 
     rounding = 0 # 8
     multisample_edges = true
-    blur = yes
-    blur_size = 6
-    blur_passes = 2
 
     drop_shadow = no
     shadow_range = 4
     shadow_render_power = 3
     col.shadow = rgba(1a1a1aee)
+}
+decoration:blur {
+    blur = yes
+    blur_size = 6
+    blur_passes = 2
+    blur_new_optimizations = true
 }
 
 animations {
@@ -122,9 +125,9 @@ gestures {
 
 # Example per-device config
 # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
-device:epic mouse V1 {
-    sensitivity = -0.5
-}
+# device:epic mouse V1 {
+#     sensitivity = -0.5
+# }
 
 # Example windowrule v1
 # windowrule = float, ^(kitty)$
