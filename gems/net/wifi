@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gem pac S wpa_supplicant wireless_tools netctl
+gem pac S wireless_tools netctl
 gem pac S dialog

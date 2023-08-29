@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gem pac S networkmanager dhcpcd
+gem pac S networkmanager
 systemctl enable NetworkManager
