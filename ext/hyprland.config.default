@@ -80,7 +80,7 @@ decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
     rounding = 0 # 8
-    multisample_edges = true
+    # multisample_edges = true
 
     blur {
         enabled = true
