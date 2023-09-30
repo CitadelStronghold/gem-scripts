@@ -1,4 +1,4 @@
 # tree /opt/wall
 
-preload = /opt/wall/abstract/pixels.png
-wallpaper = ,/opt/wall/abstract/pixels.png
+preload = /opt/wall/scapes/sea_a.jpg
+wallpaper = ,/opt/wall/scapes/sea_a.jpg
